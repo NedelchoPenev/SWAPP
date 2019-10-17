@@ -1,4 +1,4 @@
 [build]
 base = "/"
 publish = "/build/"
-command = "yarn ci && yarn build"
+command = "yarn build"
