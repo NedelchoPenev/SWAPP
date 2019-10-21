@@ -14,7 +14,7 @@ import App from './App';
 import './index.css';
 
 const httpLink = createHttpLink({
-  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
+  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {

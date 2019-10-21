@@ -1,14 +1,20 @@
 import React from 'react';
+import EpisodeCardComponent from '../../components/episode-card/episode-card.component';
 
-const AllEpisodes = ({ allEpisodes }) => {
+const EpisodesPage = ({ allEpisodes }) => {
   const { edges } = allEpisodes;
   return (
     <div>
-      {edges.map(edge => (
-        <h1>{edge.node.title}</h1>
-      ))}
+      {edges
+        .sort((a, b) => a.node.episodeId - b.node.episodeId)
+        .map(edge => (
+          <EpisodeCardComponent
+            key={edge.node.episodeId}
+            epsisode={edge.node}
+          />
+        ))}
     </div>
   );
 };
 
-export default AllEpisodes;
+export default EpisodesPage;
