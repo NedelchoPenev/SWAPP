@@ -1,5 +1,5 @@
 import React from 'react';
-import EpisodeCardComponent from '../../components/episode-card/episode-card.component';
+import EpisodeCard from '../../components/episode-card/episode-card.component';
 
 const EpisodesPage = ({ allEpisodes }) => {
   const { edges } = allEpisodes;
@@ -8,10 +8,7 @@ const EpisodesPage = ({ allEpisodes }) => {
       {edges
         .sort((a, b) => a.node.episodeId - b.node.episodeId)
         .map(edge => (
-          <EpisodeCardComponent
-            key={edge.node.episodeId}
-            epsisode={edge.node}
-          />
+          <EpisodeCard key={edge.node.episodeId} epsisode={edge.node} />
         ))}
     </div>
   );

@@ -8,13 +8,15 @@ import { ApolloClient } from 'apollo-boost';
 import { setContext } from 'apollo-link-context';
 
 import { AUTH_TOKEN } from './utils/constants';
+import { resolvers, typeDefs } from './graphql/resolvers';
 
 import App from './App';
 
 import './index.css';
+import './fonts/DeathStar-VmWB.ttf';
 
 const httpLink = createHttpLink({
-  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql'
+  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -32,11 +34,15 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache,
-  // typeDefs,
-  // resolvers
+  typeDefs,
+  resolvers,
 });
 
-// client.writeData({ data });
+client.writeData({
+  data: {
+    isLoggedIn: !!localStorage.getItem(AUTH_TOKEN),
+  },
+});
 
 ReactDOM.render(
   <ApolloProvider client={client}>

@@ -1,11 +1,8 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
-import {AUTH_TOKEN} from "./constants";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { AUTH_TOKEN } from './constants';
 
-export const ProtectedRoute = ({
-  component: Component,
-  ...rest
-}) => {
+export const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
@@ -16,10 +13,10 @@ export const ProtectedRoute = ({
           return (
             <Redirect
               to={{
-                pathname: "/login",
+                pathname: '/login',
                 state: {
-                  from: props.location
-                }
+                  from: props.location,
+                },
               }}
             />
           );

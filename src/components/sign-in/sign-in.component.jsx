@@ -15,16 +15,17 @@ class SignIn extends React.Component {
     this.setState({ [name]: value });
   };
 
+  onSubmit = event => {
+    event.preventDefault();
+    this.props.signIn({
+      variables: { email: this.state.email, password: this.state.password },
+    });
+  };
+
   render() {
-    const { email, password } = this.state;
     return (
       <div>
-        <form
-          onSubmit={e => {
-            e.preventDefault();
-            this.props.signIn({ variables: { email, password } });
-          }}
-        >
+        <form onSubmit={this.onSubmit}>
           <FormInput
             name="email"
             type="text"
