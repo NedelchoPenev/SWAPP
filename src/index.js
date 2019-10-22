@@ -40,7 +40,7 @@ const client = new ApolloClient({
 
 client.writeData({
   data: {
-    isLoggedIn: !!localStorage.getItem(AUTH_TOKEN),
+    isLoggedIn: false
   },
 });
 
