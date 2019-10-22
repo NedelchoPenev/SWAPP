@@ -4,8 +4,10 @@ import { useQuery } from '@apollo/react-hooks';
 
 import EpisodePage from './episode.component';
 
+import { FIVE_CHARACTERS } from '../../utils/constants';
+
 const GET_EPISODE = gql`
-  query episode($id: ID!) {
+  query Episode($id: ID!, $first: Int!, $cursor: String) {
     episode(id: $id) {
       id
       title
@@ -14,19 +16,65 @@ const GET_EPISODE = gql`
       image
       director
       releaseDate
+      people(first: $first, after: $cursor) {
+        edges {
+          node {
+            id
+            name
+            image
+          }
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+      }
     }
   }
 `;
 
-const EpisodePageContainer = ({match}) => {
-  const { loading, error, data } = useQuery(GET_EPISODE, {
-    variables: { id: match.params.episodeId },
+const EpisodePageContainer = ({ match }) => {
+  const { loading, error, data, fetchMore } = useQuery(GET_EPISODE, {
+    variables: { id: match.params.episodeId, first: FIVE_CHARACTERS },
   });
 
   if (loading) return null;
   if (error) return `Error! ${error}`;
 
-  return <EpisodePage episode={data.episode} />;
+  const people = data.episode.people;
+
+  return (
+    <EpisodePage
+      episode={data.episode}
+      onLoadMore={() =>
+        fetchMore({
+          variables: {
+            cursor: people.pageInfo.endCursor,
+          },
+          updateQuery: (previousResult, { fetchMoreResult }) => {
+            const newEdges = fetchMoreResult.episode.people.edges;
+            const pageInfo = fetchMoreResult.episode.people.pageInfo;
+
+            return newEdges.length
+              ? {
+                  episode: {
+                    ...previousResult.episode,
+                    people: {
+                      __typename: previousResult.episode.people.__typename,
+                      edges: [
+                        ...previousResult.episode.people.edges,
+                        ...newEdges,
+                      ],
+                      pageInfo,
+                    },
+                  },
+                }
+              : previousResult;
+          },
+        })
+      }
+    />
+  );
 };
 
 export default EpisodePageContainer;

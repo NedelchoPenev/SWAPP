@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-const EpisodeCardComponent = ({ epsisode, history, match }) => {
+const EpisodeCard = ({ epsisode, history, match }) => {
   const { id, title, openingCrawl, image } = epsisode;
 
   return (
@@ -13,4 +13,4 @@ const EpisodeCardComponent = ({ epsisode, history, match }) => {
   );
 };
 
-export default withRouter(EpisodeCardComponent);
+export default withRouter(EpisodeCard);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMutation } from 'react-apollo';
+import { useMutation, useApolloClient } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { withRouter } from 'react-router-dom';
 
@@ -16,6 +16,7 @@ const SIGNIN_MUTATION = gql`
 `;
 
 const SignInContainer = ({ history }) => {
+  const client = useApolloClient();
   const [signIn, { loading, error }] = useMutation(SIGNIN_MUTATION, {
     onCompleted(data) {
       _confirm(data);
@@ -24,6 +25,7 @@ const SignInContainer = ({ history }) => {
 
   const _confirm = async data => {
     _saveUserData(data.signIn.token);
+    client.writeData({ data: { isLoggedIn: true } });
     history.push(`/episodes`);
   };
 

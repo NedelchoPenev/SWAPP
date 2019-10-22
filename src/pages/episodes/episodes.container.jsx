@@ -4,6 +4,8 @@ import { useQuery } from '@apollo/react-hooks';
 
 import EpisodesPage from './episodes.component';
 
+import { ALL_EPISODES } from '../../utils/constants';
+
 const GET_ALL_EPISODES = gql`
   query allEpisodes($first: Int!) {
     allEpisodes(first: $first) {
@@ -22,7 +24,7 @@ const GET_ALL_EPISODES = gql`
 
 const EpisodesPageContainer = () => {
   const { loading, error, data } = useQuery(GET_ALL_EPISODES, {
-    variables: { first: 7 },
+    variables: { first: ALL_EPISODES },
   });
 
   if (loading) return null;
