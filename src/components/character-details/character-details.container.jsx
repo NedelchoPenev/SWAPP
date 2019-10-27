@@ -1,7 +1,9 @@
 import React from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from 'react-apollo';
+
 import CharacterDetails from './character-details.component';
+import Spinner from '../spinner/spinner.component';
 
 const GET_PERSON = gql`
   query Person($id: ID!) {
@@ -34,7 +36,7 @@ const CharacterDetailsContainer = ({ match }) => {
     variables: { id: match.params.characterId },
   });
 
-  if (loading) return null;
+  if (loading) return <Spinner/>;
   if (error) return `Error! ${error}`;
 
   return <CharacterDetails person={data.person} />;

@@ -2,16 +2,16 @@ import React from 'react';
 
 const StarshipDetails = ({ starship }) => {
   const {
-    id,
+    // id,
     name,
     image,
-    model,
-    starshipClass,
-    cost,
-    maxAtmosphericSpeed,
-    maxMLPerHour,
-    hyperdriveRating,
-    crew,
+    // model,
+    // starshipClass,
+    // cost,
+    // maxAtmosphericSpeed,
+    // maxMLPerHour,
+    // hyperdriveRating,
+    // crew,
   } = starship;
 
   return (

@@ -7,16 +7,13 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloClient } from 'apollo-boost';
 import { setContext } from 'apollo-link-context';
 
-import { AUTH_TOKEN } from './utils/constants';
-import { resolvers, typeDefs } from './graphql/resolvers';
+import { AUTH_TOKEN, THEME } from './utils/constants';
+import { typeDefs, resolvers } from './graphql/resolvers';
 
 import App from './App';
 
-import './index.css';
-import './fonts/DeathStar-VmWB.ttf';
-
 const httpLink = createHttpLink({
-  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
+  uri: 'https://swapp.st6.io/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -35,12 +32,13 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache,
   typeDefs,
-  resolvers,
+  resolvers
 });
 
 client.writeData({
   data: {
-    isLoggedIn: !!localStorage.getItem(AUTH_TOKEN)
+    isLoggedIn: !!localStorage.getItem(AUTH_TOKEN),
+    theme: !localStorage.getItem(THEME) ? 'light' : localStorage.getItem(THEME)
   },
 });
 

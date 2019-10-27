@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import { AUTH_TOKEN } from '../../utils/constants';
 
 import SignIn from './sign-in.component';
+import Spinner from '../spinner/spinner.component';
 
 const SIGNIN_MUTATION = gql`
   mutation SignIn($email: String!, $password: String!) {
@@ -33,10 +34,9 @@ const SignInContainer = ({ history }) => {
     localStorage.setItem(AUTH_TOKEN, token);
   };
 
-  if (loading) return null;
-  if (error) return `Error! ${error}`;
+  if (loading) return <Spinner/>;
 
-  return <SignIn signIn={signIn} />;
+  return <SignIn signIn={signIn} error={error}/>;
 };
 
 export default withRouter(SignInContainer);

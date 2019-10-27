@@ -1,30 +1,29 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { useApolloClient } from 'react-apollo';
 
-const fontFamily = {
-  fontFamily: 'Death Star',
-  fontSize: '46px',
-};
+import LogoContainer from '../logo/logo.container';
+
+import {
+  HeaderContainer,
+  OptionsContainer,
+  LogoStyleContainer,
+  OptionLink,
+  LogoutStyle,
+  LogoWrapper,
+} from './header.styles';
 
 const Header = ({ history }) => {
   const client = useApolloClient();
   return (
-    <div className="header">
-      <div className="logo-container">
-        <div className="logo" style={fontFamily}>
-          SWAPP
-        </div>
-      </div>
-      <div className="options">
-        <Link className="option" to="/episodes">
-          Episodes
-        </Link>
-        <Link className="option" to="/characters">
-          Characters
-        </Link>
-        <Link
-          className="option"
+    <HeaderContainer>
+      <LogoStyleContainer>
+        <LogoContainer asTitle={false} />
+      </LogoStyleContainer>
+      <OptionsContainer>
+        <OptionLink to="/episodes">Episodes</OptionLink>
+        <OptionLink to="/characters">Characters</OptionLink>
+        <OptionLink
           to="/login"
           onClick={() => {
             client.writeData({ data: { isLoggedIn: false } });
@@ -32,10 +31,12 @@ const Header = ({ history }) => {
             history.push('/login');
           }}
         >
-          Logout
-        </Link>
-      </div>
-    </div>
+          <LogoWrapper>
+            <LogoutStyle />
+          </LogoWrapper>
+        </OptionLink>
+      </OptionsContainer>
+    </HeaderContainer>
   );
 };
 

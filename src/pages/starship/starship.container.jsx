@@ -1,7 +1,9 @@
 import React from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from 'react-apollo';
+
 import StarshipPage from './starship.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 const GET_STARSHIP = gql`
   query Starship($id: ID!) {
@@ -25,7 +27,7 @@ const StarshipPageContainer = ({ match }) => {
     variables: { id: match.params.starshipId },
   });
 
-  if (loading) return null;
+  if (loading) return <Spinner/>;
   if (error) return `Error! ${error}`;
 
   return <StarshipPage starship={data.starship} />;
