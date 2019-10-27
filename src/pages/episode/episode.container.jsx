@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import EpisodePage from './episode.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 import { FIVE_CHARACTERS } from '../../utils/constants';
 
@@ -38,7 +39,7 @@ const EpisodePageContainer = ({ match }) => {
     variables: { id: match.params.episodeId, first: FIVE_CHARACTERS },
   });
 
-  if (loading) return null;
+  if (loading) return <Spinner/>;
   if (error) return `Error! ${error}`;
 
   const people = data.episode.people;

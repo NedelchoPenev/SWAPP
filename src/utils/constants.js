@@ -1,4 +1,5 @@
 export const AUTH_TOKEN = 'auth-token';
+export const THEME = 'theme';
 export const MISSING_IMG =
   'https://images-na.ssl-images-amazon.com/images/I/61R2%2Bfcus9L._SY679_.jpg';
 export const ALL_EPISODES = 10;

@@ -2,6 +2,9 @@ import React from 'react';
 
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
+import LogoContainer from '../logo/logo.container';
+
+import { ErrorMessage, SignInContainer, FormContainer } from './sign-in.style';
 
 class SignIn extends React.Component {
   state = {
@@ -24,27 +27,35 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <FormInput
-            name="email"
-            type="text"
-            handleChange={this.handleChange}
-            value={this.state.email}
-            placeholder="email"
-            required
-          />
-          <FormInput
-            name="password"
-            type="password"
-            value={this.state.password}
-            handleChange={this.handleChange}
-            placeholder="Password"
-            required
-          />
-          <CustomButton type="submit"> Login </CustomButton>
-        </form>
-      </div>
+      <SignInContainer>
+        <LogoContainer asTitle={true} />
+        <FormContainer>
+          {this.props.error
+            ? this.props.error.graphQLErrors.map(({ message }, i) => (
+                <ErrorMessage key={i}>{message}</ErrorMessage>
+              ))
+            : null}
+          <form onSubmit={this.onSubmit}>
+            <FormInput
+              name="email"
+              type="text"
+              handleChange={this.handleChange}
+              value={this.state.email}
+              placeholder="Email"
+              required
+            />
+            <FormInput
+              name="password"
+              type="password"
+              value={this.state.password}
+              handleChange={this.handleChange}
+              placeholder="Password"
+              required
+            />
+            <CustomButton type="submit" id='form-button'> Login </CustomButton>
+          </form>
+        </FormContainer>
+      </SignInContainer>
     );
   }
 }

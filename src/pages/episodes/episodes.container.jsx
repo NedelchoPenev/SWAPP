@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
 import EpisodesPage from './episodes.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 import { ALL_EPISODES } from '../../utils/constants';
 
@@ -27,7 +28,7 @@ const EpisodesPageContainer = () => {
     variables: { first: ALL_EPISODES },
   });
 
-  if (loading) return null;
+  if (loading) return <Spinner/>;
   if (error) return `Error! ${error}`;
 
   return <EpisodesPage allEpisodes={data.allEpisodes} />;

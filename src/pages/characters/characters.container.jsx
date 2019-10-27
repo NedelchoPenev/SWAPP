@@ -3,6 +3,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from 'react-apollo';
 
 import CharactersPage from './characters.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 import { TWELVE_CHARACTERS } from '../../utils/constants';
 
@@ -29,7 +30,7 @@ const CharactersPageContainer = () => {
     variables: { first: TWELVE_CHARACTERS },
   });
 
-  if (loading) return null;
+  if (loading) return <Spinner/>;
   if (error) return `Error! ${error}`;
 
   const allPeople = data.allPeople;
