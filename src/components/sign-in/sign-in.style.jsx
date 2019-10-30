@@ -11,8 +11,19 @@ export const SignInContainer = styled.div`
   margin: 4em auto;
   padding: 0 2em 1.5em;
   background: #000;
+
+  & > p {
+    margin: 0.2em auto;
+    color: ${({ theme }) => theme.headingFontColor};
+
+    & > span {
+      color: ${({ theme }) => theme.credentials};
+    }
+  } 
+
   @media screen and (max-width: 800px) {
     padding: 0;
+    font-size: 3vw;
   }
 `;
 

@@ -14,7 +14,6 @@ import {
 
 const CharacterDetails = ({ person, history }) => {
   const { name, image, height, mass, species, homeworld, starships } = person;
-
   return (
     <CharDetailsWrapper>
       <h1>{name}</h1>
@@ -26,11 +25,30 @@ const CharacterDetails = ({ person, history }) => {
           ) : (
             <img src={MISSING_IMG} alt={name} />
           )}
-
-          <p><span id="pointer">Height: </span><span id="content">{height}</span></p>
-          <p><span id="pointer">Weight: </span><span id="content">{mass}</span></p>
-          <p><span id="pointer">Species: </span><span id="content">{species.name}</span></p>
-          <p><span id="pointer">Home World: </span><span id="content">{homeworld.name}</span></p>
+          {height ? (
+            <p>
+              <span id="pointer">Height: </span>
+              <span id="content">{height}</span>
+            </p>
+          ) : null}
+          {mass ? (
+            <p>
+              <span id="pointer">Weight: </span>
+              <span id="content">{mass}</span>
+            </p>
+          ) : null}
+          {species ? (
+            <p>
+              <span id="pointer">Species: </span>
+              <span id="content">{species.name}</span>
+            </p>
+          ) : null}
+          {homeworld ? (
+            <p>
+              <span id="pointer">Home World: </span>
+              <span id="content">{homeworld.name}</span>
+            </p>
+          ) : null}
         </CharDetailsCard>
         <CharShips>
           <h2>Piloted Starships</h2>

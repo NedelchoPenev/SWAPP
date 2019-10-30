@@ -5,3 +5,4 @@ export const MISSING_IMG =
 export const ALL_EPISODES = 10;
 export const FIVE_CHARACTERS = 5;
 export const TWELVE_CHARACTERS = 12;
+export const ALL_STARSHIPS = 40;
