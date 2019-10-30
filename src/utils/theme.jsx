@@ -16,9 +16,10 @@ export const lightTheme = {
   barFontColor: '#4BD5EE',
   headingFontColor: '#4BD5EE',
   titleFontColor: '#4E5B6E',
-  radarFontColor: '#4BD5EE',
+  radarFontColor: '#FFE300',
   radarBackground: '#000',
-  radarGrid: '#3C4858'
+  radarGrid: '#3C4858',
+  credentials: '#FFE300'
 }
 
 export const darkTheme = {
@@ -39,7 +40,8 @@ export const darkTheme = {
   barFontColor: '#4BD5EE',
   headingFontColor: '#FFE300',
   titleFontColor: '#4BD5EE',
-  radarFontColor: '#FFE300',
+  radarFontColor: '#4BD5EE',
   radarBackground: '#000',
-  radarGrid: '#333'
+  radarGrid: '#333',
+  credentials: '#4BD5EE'
 }

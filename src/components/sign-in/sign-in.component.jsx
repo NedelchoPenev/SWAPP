@@ -55,6 +55,8 @@ class SignIn extends React.Component {
             <CustomButton type="submit" id='form-button'> Login </CustomButton>
           </form>
         </FormContainer>
+        <p><span>Email: </span>demo@st6.io</p>
+        <p><span>Password: </span>demo1234</p>
       </SignInContainer>
     );
   }
