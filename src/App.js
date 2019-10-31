@@ -33,7 +33,7 @@ const GET_THEME = gql`
 const App = () => {
   const {data: {theme}} = useQuery(GET_THEME);
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
+  
   const { data } = useQuery(IS_LOGGED_IN);
 
   return (

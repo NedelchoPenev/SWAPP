@@ -12,8 +12,10 @@ import {
   CharDetailsContainer,
 } from './character-details.styles';
 
-const CharacterDetails = ({ person, history }) => {
-  const { name, image, height, mass, species, homeworld, starships } = person;
+const CharacterDetails = ({
+  person: { name, image, height, mass, species, homeworld, starships },
+  history,
+}) => {
   return (
     <CharDetailsWrapper>
       <h1>{name}</h1>

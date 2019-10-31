@@ -4,7 +4,7 @@ import CharacterCard from '../../components/character-card/character-card.compon
 import CustomButton from '../../components/custom-button/custom-button.component';
 
 import { CharWrapper, CharContainer } from '../characters/characters.styles';
-import { EpisodeContainer, ImgCard, Info, TitleContainer } from './episode.style';
+import { EpisodeContainer, ImgCard, Info, TitleContainer } from './episode.styles';
 
 const numToRomanNum = {
   1: 'I',

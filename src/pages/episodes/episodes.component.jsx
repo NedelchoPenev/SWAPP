@@ -2,7 +2,7 @@ import React from 'react';
 
 import EpisodeCard from '../../components/episode-card/episode-card.component';
 
-import { EpisodesContainer } from './episodes.style';
+import { EpisodesContainer } from './episodes.styles';
 
 const EpisodesPage = ({ allEpisodes }) => {
   const { edges } = allEpisodes;

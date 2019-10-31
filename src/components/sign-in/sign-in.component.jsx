@@ -4,7 +4,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import LogoContainer from '../logo/logo.container';
 
-import { ErrorMessage, SignInContainer, FormContainer } from './sign-in.style';
+import { ErrorMessage, SignInContainer, FormContainer } from './sign-in.styles';
 
 class SignIn extends React.Component {
   state = {

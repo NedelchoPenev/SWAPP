@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard component should render CharacterCard component 1`] = `
+<styled.div
+  onClick={[Function]}
+>
+  <img
+    alt="Obi-Wan Kenobi"
+    src="www.testImage.com"
+  />
+  <h2>
+    Obi-Wan Kenobi
+  </h2>
+</styled.div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodeCard component should render EpisodeCard component 1`] = `
+<styled.div
+  onClick={[Function]}
+>
+  <styled.span>
+    <styled.span>
+      <img
+        alt="The Phantom Menace"
+        src="www.testImage.com"
+      />
+    </styled.span>
+    <styled.span>
+      <Title>
+        The Phantom Menace
+      </Title>
+      <Description>
+        Test test test
+      </Description>
+    </styled.span>
+  </styled.span>
+</styled.div>
+`;
