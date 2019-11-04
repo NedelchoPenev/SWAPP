@@ -52,6 +52,8 @@ export const OptionLink = styled(Link)`
   }
 `;
 
+OptionLink.displayName = 'OptionLink';
+
 export const LogoWrapper = styled.div`
   padding: 8px;
   border-radius: 3px;

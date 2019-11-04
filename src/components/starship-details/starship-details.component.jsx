@@ -2,8 +2,8 @@ import React from 'react';
 
 import { ShipDetailsCard } from './starship-details.styles';
 
-const StarshipDetails = ({ starship }) => {
-  const {
+const StarshipDetails = ({
+  starship: {
     name,
     image,
     starshipClass,
@@ -11,8 +11,8 @@ const StarshipDetails = ({ starship }) => {
     maxAtmosphericSpeed,
     hyperdriveRating,
     crew,
-  } = starship;
-
+  }
+}) => {
   return (
     <ShipDetailsCard>
       <h2>{name}</h2>

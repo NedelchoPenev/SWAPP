@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarshipDetails component should render StarshipDetails component 1`] = `
+<styled.div>
+  <h2>
+    Jedi starfighter
+  </h2>
+  <img
+    alt="Jedi starfighter"
+    src="www.testImage.com"
+  />
+  <p>
+    <span
+      id="pointer"
+    >
+      Class: 
+    </span>
+    <span
+      id="content"
+    >
+      starfighter
+    </span>
+  </p>
+  <p>
+    <span
+      id="pointer"
+    >
+      Cost: 
+    </span>
+    <span
+      id="content"
+    >
+      180000
+       credits
+    </span>
+  </p>
+  <p>
+    <span
+      id="pointer"
+    >
+      Crew: 
+    </span>
+    <span
+      id="content"
+    >
+      10
+    </span>
+  </p>
+  <p>
+    <span
+      id="pointer"
+    >
+      Max Atmospheric Speed: 
+    </span>
+    <span
+      id="content"
+    >
+      1150
+    </span>
+  </p>
+  <p>
+    <span
+      id="pointer"
+    >
+      Hyperdrive Rating: 
+    </span>
+    <span
+      id="content"
+    >
+      1
+    </span>
+  </p>
+</styled.div>
+`;

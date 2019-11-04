@@ -1,8 +1,8 @@
-#SWAPP
+# SWAPP
 Star Wars App
-##Idea
+## Idea
 A simple web application where you can explore data from Star Wars movies. Build with React, Graphql, and Apollo.
-##Design
+## Design
 The application is split into six parts.
 * Login area
   * Guests are not allowed into the system.

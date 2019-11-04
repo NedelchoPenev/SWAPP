@@ -9,8 +9,8 @@ describe('CharacterDetails component', () => {
   const mockName = 'Obi-Wan Kenobi';
   const mockHeight = '182';
   const mockMass = '77';
-  const mockSpecies = 'Human';
-  const mockHomeworld = 'Stewjon';
+  const mockSpecies = {name: 'Human'};
+  const mockHomeworld = {name: 'Stewjon'};
   const mockStarships = [{
     node: {
       id: "starships.48",
@@ -81,7 +81,7 @@ describe('CharacterDetails component', () => {
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#pointer').first().text()).toEqual('Height: ');
+    expect(wrapper.find('#content').first().text()).toEqual(mockHeight);
   });
 
   it('should NOT render if height is NOT available', () => {
@@ -102,14 +102,14 @@ describe('CharacterDetails component', () => {
 
     expect(newWrapper.find('#pointer').length).toBe(3);
 
-    expect(newWrapper.find('#pointer').first().text()).not.toEqual('Height: ');
+    expect(newWrapper.find('#content').first().text()).not.toEqual(mockHeight);
   });
 
   it('should render weight if mass prop is available', () => {
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#pointer').at(1).text()).toEqual('Weight: ');
+    expect(wrapper.find('#content').at(1).text()).toEqual(mockMass);
   });
 
   it('should NOT render if weight is NOT available', () => {
@@ -130,14 +130,14 @@ describe('CharacterDetails component', () => {
 
     expect(newWrapper.find('#pointer').length).toBe(3);
 
-    expect(newWrapper.find('#pointer').at(1).text()).not.toEqual('Weight: ');
+    expect(newWrapper.find('#content').at(1).text()).not.toEqual(mockMass);
   });
 
   it('should render species if species prop is available', () => {
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#pointer').at(2).text()).toEqual('Species: ');
+    expect(wrapper.find('#content').at(2).text()).toEqual(mockSpecies.name);
   });
 
   it('should NOT render if species is NOT available', () => {
@@ -158,14 +158,14 @@ describe('CharacterDetails component', () => {
 
     expect(newWrapper.find('#pointer').length).toBe(3);
 
-    expect(newWrapper.find('#pointer').at(2).text()).not.toEqual('Species: ');
+    expect(newWrapper.find('#content').at(2).text()).not.toEqual(mockSpecies.name);
   });
 
   it('should render homeworld if homeworld prop is available', () => {
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#pointer').at(3).text()).toEqual('Home World: ');
+    expect(wrapper.find('#content').at(3).text()).toEqual(mockHomeworld.name);
   });
 
   it('should NOT render if homeworld is NOT available', () => {
@@ -182,10 +182,10 @@ describe('CharacterDetails component', () => {
       history: mockHistory
     };
 
-    const newWrapper = shallow(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = mount(<CharacterDetails.WrappedComponent {...mockProps}/>)
 
     expect(newWrapper.find('#pointer').length).toBe(3);
     
-    expect(newWrapper.find('#pointer').at(3)).toEqual({});
+    expect(newWrapper.props().person.homeworld).toBe(null);
   });
 });

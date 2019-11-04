@@ -46,7 +46,9 @@ exports[`CharacterDetails component should render CharacterDetails component 1`]
         </span>
         <span
           id="content"
-        />
+        >
+          Human
+        </span>
       </p>
       <p>
         <span
@@ -56,7 +58,9 @@ exports[`CharacterDetails component should render CharacterDetails component 1`]
         </span>
         <span
           id="content"
-        />
+        >
+          Stewjon
+        </span>
       </p>
     </styled.div>
     <styled.div>

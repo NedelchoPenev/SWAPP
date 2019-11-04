@@ -99,7 +99,6 @@ const StarshipPageContainer = ({ match }) => {
   );
 
   const radarData = calculateRadarStats(sameClassStarships, data.starship);
-  console.log(radarData)
 
   return <StarshipPage starship={data.starship} data={radarData}/>;
 };

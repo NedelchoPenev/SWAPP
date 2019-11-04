@@ -6,8 +6,12 @@ import Header from './header.component';
 
 describe('Header component', () => {
   it('should render Header component', () => {
-    const wrapper = shallow(<MockedProvider><Header.WrappedComponent /></MockedProvider>)
+    const wrapper = shallow(<Header.WrappedComponent />)
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should ', () => {
+    
   });
 });

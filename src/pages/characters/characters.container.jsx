@@ -7,7 +7,7 @@ import Spinner from '../../components/spinner/spinner.component';
 
 import { TWELVE_CHARACTERS } from '../../utils/constants';
 
-const GET_ALL_CHARACTERS = gql`
+export const GET_ALL_CHARACTERS = gql`
   query AllPeople($first: Int!, $cursor: String) {
     allPeople(first: $first, after: $cursor) {
       edges {

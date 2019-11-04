@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 import { AUTH_TOKEN } from '../../utils/constants';
 
 import SignIn from './sign-in.component';
-import Spinner from '../spinner/spinner.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 const SIGNIN_MUTATION = gql`
   mutation SignIn($email: String!, $password: String!) {

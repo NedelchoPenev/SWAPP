@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CustomButton from '../custom-button/custom-button.component';
-import FormInput from '../form-input/form-input.component';
-import LogoContainer from '../logo/logo.container';
+import CustomButton from '../../components/custom-button/custom-button.component';
+import FormInput from '../../components/form-input/form-input.component';
+import LogoContainer from '../../components/logo/logo.container';
 
 import { ErrorMessage, SignInContainer, FormContainer } from './sign-in.styles';
 
@@ -10,6 +10,7 @@ class SignIn extends React.Component {
   state = {
     email: '',
     password: '',
+    submitted: false
   };
 
   handleChange = event => {
@@ -20,20 +21,22 @@ class SignIn extends React.Component {
 
   onSubmit = event => {
     event.preventDefault();
+    this.setState({ submitted: true })
     this.props.signIn({
       variables: { email: this.state.email, password: this.state.password },
     });
   };
-
+  
   render() {
+    
     return (
       <SignInContainer>
         <LogoContainer asTitle={true} />
         <FormContainer>
           {this.props.error
-            ? this.props.error.graphQLErrors.map(({ message }, i) => (
-                <ErrorMessage key={i}>{message}</ErrorMessage>
-              ))
+            ? this.props.error.graphQLErrors.map(({ message }, i) => {
+                return <ErrorMessage key={i}>{message}</ErrorMessage>
+            })
             : null}
           <form onSubmit={this.onSubmit}>
             <FormInput

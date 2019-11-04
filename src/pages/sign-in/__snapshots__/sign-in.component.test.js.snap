@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn component should render SignIn component 1`] = `
+<styled.div>
+  <LogoContainer
+    asTitle={true}
+  />
+  <styled.div>
+    <form
+      onSubmit={[Function]}
+    >
+      <FormInput
+        handleChange={[Function]}
+        name="email"
+        placeholder="Email"
+        required={true}
+        type="text"
+        value=""
+      />
+      <FormInput
+        handleChange={[Function]}
+        name="password"
+        placeholder="Password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <CustomButton
+        id="form-button"
+        type="submit"
+      >
+         Login 
+      </CustomButton>
+    </form>
+  </styled.div>
+  <p>
+    <span>
+      Email: 
+    </span>
+    demo@st6.io
+  </p>
+  <p>
+    <span>
+      Password: 
+    </span>
+    demo1234
+  </p>
+</styled.div>
+`;

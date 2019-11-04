@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodesPage component should render EpisodesPage component 1`] = `
+<styled.div>
+  <withRouter(EpisodeCard)
+    epsisode={
+      Object {
+        "episodeId": "film.2",
+      }
+    }
+    key="film.2"
+  />
+  <withRouter(EpisodeCard)
+    epsisode={
+      Object {
+        "episodeId": "film.1",
+      }
+    }
+    key="film.1"
+  />
+</styled.div>
+`;
