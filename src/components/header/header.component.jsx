@@ -31,7 +31,7 @@ const Header = ({ history }) => {
             history.push('/login');
           }}
         >
-          <LogoWrapper>
+          <LogoWrapper >
             <LogoutStyle />
           </LogoWrapper>
         </OptionLink>

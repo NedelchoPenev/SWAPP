@@ -65,6 +65,8 @@ export const LogoWrapper = styled.div`
   }
 `;
 
+LogoWrapper.displayName = 'LogoWrapper';
+
 export const LogoutStyle = styled(Logout)`
   fill: #4bd5ee;
   width: 25px;
