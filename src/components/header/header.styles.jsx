@@ -52,6 +52,8 @@ export const OptionLink = styled(Link)`
   }
 `;
 
+OptionLink.displayName = 'OptionLink';
+
 export const LogoWrapper = styled.div`
   padding: 8px;
   border-radius: 3px;
@@ -62,6 +64,8 @@ export const LogoWrapper = styled.div`
     margin-right: 5px;
   }
 `;
+
+LogoWrapper.displayName = 'LogoWrapper';
 
 export const LogoutStyle = styled(Logout)`
   fill: #4bd5ee;

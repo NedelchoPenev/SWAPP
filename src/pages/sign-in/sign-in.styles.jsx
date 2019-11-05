@@ -4,6 +4,8 @@ export const ErrorMessage = styled.div`
   color: red;
 `;
 
+ErrorMessage.displayName = 'ErrorMessage';
+
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;

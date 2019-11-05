@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarshipPage component should render StarshipPage component 1`] = `
+<styled.div>
+  <h1>
+    Test name
+  </h1>
+  <h2>
+    (
+    Test model
+    )
+  </h2>
+  <styled.div>
+    <StarshipDetails
+      starship={
+        Object {
+          "model": "Test model",
+          "name": "Test name",
+        }
+      }
+    />
+    <Radar />
+  </styled.div>
+</styled.div>
+`;

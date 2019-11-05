@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo component should render Logo component 1`] = `
+<LogoStyle>
+  SWAPP
+</LogoStyle>
+`;

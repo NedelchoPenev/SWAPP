@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharactersPage component should render CharactersPage component 1`] = `
+<styled.div>
+  <styled.div>
+    <withRouter(CharacterCard)
+      character={
+        Object {
+          "id": 1,
+        }
+      }
+      key="1"
+    />
+  </styled.div>
+  <CustomButton>
+     Load More 
+  </CustomButton>
+</styled.div>
+`;

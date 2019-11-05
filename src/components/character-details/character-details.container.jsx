@@ -5,7 +5,7 @@ import { useQuery } from 'react-apollo';
 import CharacterDetails from './character-details.component';
 import Spinner from '../spinner/spinner.component';
 
-const GET_PERSON = gql`
+export const GET_PERSON = gql`
   query Person($id: ID!) {
     person(id: $id) {
       name

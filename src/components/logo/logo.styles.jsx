@@ -26,3 +26,5 @@ export const LogoStyle = styled.div`
   cursor: pointer;
   ${isLogoTitle}
 `;
+
+LogoStyle.displayName = 'LogoStyle';

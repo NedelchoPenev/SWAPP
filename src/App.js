@@ -4,7 +4,7 @@ import { useQuery } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { ThemeProvider } from 'styled-components';
 
-import SignInContainer from './components/sign-in/sign-in.container';
+import SignInContainer from './pages/sign-in/sign-in.container';
 import Header from './components/header/header.component';
 import EpisodesPageContainer from './pages/episodes/episodes.container';
 import EpisodePageContainer from './pages/episode/episode.container';
@@ -33,7 +33,7 @@ const GET_THEME = gql`
 const App = () => {
   const {data: {theme}} = useQuery(GET_THEME);
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
+  
   const { data } = useQuery(IS_LOGGED_IN);
 
   return (

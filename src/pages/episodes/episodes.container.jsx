@@ -7,7 +7,7 @@ import Spinner from '../../components/spinner/spinner.component';
 
 import { ALL_EPISODES } from '../../utils/constants';
 
-const GET_ALL_EPISODES = gql`
+export const GET_ALL_EPISODES = gql`
   query allEpisodes($first: Int!) {
     allEpisodes(first: $first) {
       edges {

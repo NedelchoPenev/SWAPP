@@ -7,19 +7,20 @@ import Spinner from '../../components/spinner/spinner.component';
 
 import { TWELVE_CHARACTERS } from '../../utils/constants';
 
-const GET_ALL_CHARACTERS = gql`
-  query AllPeople($first: Int!, $cursor: String) {
-    allPeople(first: $first, after: $cursor) {
+export const GET_ALL_CHARACTERS = gql`
+  query AllPeople($first: Int!, $after: String) {
+    allPeople(first: $first, after: $after) {
       edges {
         node {
           id
           name
           image
         }
+        cursor
       }
       pageInfo {
-        hasNextPage
         endCursor
+        hasNextPage
       }
     }
   }
@@ -35,30 +36,32 @@ const CharactersPageContainer = () => {
 
   const allPeople = data.allPeople;
 
+  const loadMore = () => {
+    fetchMore({variables: {
+        after: allPeople.pageInfo.endCursor,
+      },
+      updateQuery: (previousResult, { fetchMoreResult }) => {
+        const newEdges = fetchMoreResult.allPeople.edges;
+        const pageInfo = fetchMoreResult.allPeople.pageInfo;
+        console.log(fetchMore.variables)
+  
+        return newEdges.length
+          ? {
+              allPeople: {
+                __typename: previousResult.allPeople.__typename,
+                edges: [...previousResult.allPeople.edges, ...newEdges],
+                pageInfo,
+              },
+            }
+          : previousResult;
+      },
+    })
+  }
+
   return (
     <CharactersPage
       people={allPeople}
-      onLoadMore={() =>
-        fetchMore({
-          variables: {
-            cursor: allPeople.pageInfo.endCursor,
-          },
-          updateQuery: (previousResult, { fetchMoreResult }) => {
-            const newEdges = fetchMoreResult.allPeople.edges;
-            const pageInfo = fetchMoreResult.allPeople.pageInfo;
-
-            return newEdges.length
-              ? {
-                  allPeople: {
-                    __typename: previousResult.allPeople.__typename,
-                    edges: [...previousResult.allPeople.edges, ...newEdges],
-                    pageInfo,
-                  },
-                }
-              : previousResult;
-          },
-        })
-      }
+      onLoadMore={() => loadMore()}
     />
   );
 };

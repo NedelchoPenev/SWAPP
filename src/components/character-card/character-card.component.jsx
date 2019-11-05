@@ -5,8 +5,7 @@ import { MISSING_IMG } from '../../utils/constants';
 
 import { Card } from './character-card.styles';
 
-const CharacterCard = ({ character, history }) => {
-  const { id, name, image } = character;
+const CharacterCard = ({ character: { id, name, image }, history }) => {
   return (
     <Card onClick={() => history.push(`/characters/${id}`)}>
       {image ? (

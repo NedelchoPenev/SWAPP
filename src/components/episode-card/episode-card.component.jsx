@@ -3,9 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import { Card, CardInner, CardMedia, CardMeta, Title, Description } from './episode-card.styles';
 
-const EpisodeCard = ({ epsisode, history, match }) => {
-  const { id, title, openingCrawl, image } = epsisode;
-
+const EpisodeCard = ({ epsisode: { id, title, openingCrawl, image }, history, match }) => {
   return (
     <Card onClick={() => history.push(`${match.path}/${id}`)}>
       <CardInner>

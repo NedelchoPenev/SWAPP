@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodePage component should render EpisodePage component 1`] = `
+<styled.div>
+  <styled.div>
+    <img
+      alt="The Phantom Menace"
+      src="www.testImage.com"
+    />
+    <styled.div>
+      <h1>
+        Star Wars: Episode 
+      </h1>
+      <h2>
+        The Phantom Menace
+      </h2>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <p>
+      Test test test
+    </p>
+    <p>
+      <span
+        id="pointer"
+      >
+        Director:
+      </span>
+       
+      <span
+        id="content"
+      >
+        George Lucas
+      </span>
+    </p>
+    <p>
+      <span
+        id="pointer"
+      >
+        Release Date: 
+      </span>
+      <span
+        id="content"
+      >
+        1999-05-19
+      </span>
+    </p>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <withRouter(CharacterCard)
+        character={
+          Object {
+            "id": "test",
+          }
+        }
+        key="test"
+      />
+    </styled.div>
+    <CustomButton>
+       Load More 
+    </CustomButton>
+  </styled.div>
+</styled.div>
+`;

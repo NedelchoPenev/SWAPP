@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radar component should render Radar component 1`] = `
+<styled.div>
+  <h2>
+    Compared to Starship Class Max
+  </h2>
+  <styled.div>
+    <f
+      captions={
+        Object {
+          "cost": "Cost",
+          "crew": "Crew",
+          "hyperdriveRating": "HyperD Rat.",
+          "maxAtmosphericSpeed": "Max Atm. Speed",
+          "maxMLPerHour": "Max ML/h",
+        }
+      }
+      data={
+        Array [
+          undefined,
+        ]
+      }
+      options={
+        Object {
+          "axes": false,
+          "dots": true,
+          "scales": 5,
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;

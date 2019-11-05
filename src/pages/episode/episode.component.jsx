@@ -4,7 +4,12 @@ import CharacterCard from '../../components/character-card/character-card.compon
 import CustomButton from '../../components/custom-button/custom-button.component';
 
 import { CharWrapper, CharContainer } from '../characters/characters.styles';
-import { EpisodeContainer, ImgCard, Info, TitleContainer } from './episode.style';
+import {
+  EpisodeContainer,
+  ImgCard,
+  Info,
+  TitleContainer,
+} from './episode.styles';
 
 const numToRomanNum = {
   1: 'I',
@@ -16,8 +21,8 @@ const numToRomanNum = {
   7: 'VII',
 };
 
-const EpisodePage = ({ episode, onLoadMore }) => {
-  const {
+const EpisodePage = ({
+  episode: {
     episodeId,
     title,
     openingCrawl,
@@ -25,8 +30,9 @@ const EpisodePage = ({ episode, onLoadMore }) => {
     director,
     releaseDate,
     people,
-  } = episode;
-
+  },
+  onLoadMore,
+}) => {
   return (
     <EpisodeContainer>
       <ImgCard>
@@ -38,8 +44,14 @@ const EpisodePage = ({ episode, onLoadMore }) => {
       </ImgCard>
       <Info>
         <p>{openingCrawl}</p>
-        <p><span id="pointer">Director:</span> <span id="content">{director}</span></p>
-        <p><span id="pointer">Release Date: </span><span id="content">{releaseDate}</span></p>
+        <p>
+          <span id="pointer">Director:</span>{' '}
+          <span id="content">{director}</span>
+        </p>
+        <p>
+          <span id="pointer">Release Date: </span>
+          <span id="content">{releaseDate}</span>
+        </p>
       </Info>
       <CharWrapper>
         <CharContainer>

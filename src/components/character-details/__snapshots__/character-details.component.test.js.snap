@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterDetails component should render CharacterDetails component 1`] = `
+<styled.div>
+  <h1>
+    Obi-Wan Kenobi
+  </h1>
+  <styled.div>
+    <styled.div>
+      <h2>
+        Obi-Wan Kenobi
+      </h2>
+      <img
+        alt="Obi-Wan Kenobi"
+        src="www.testImage.com"
+      />
+      <p>
+        <span
+          id="pointer"
+        >
+          Height: 
+        </span>
+        <span
+          id="content"
+        >
+          182
+        </span>
+      </p>
+      <p>
+        <span
+          id="pointer"
+        >
+          Weight: 
+        </span>
+        <span
+          id="content"
+        >
+          77
+        </span>
+      </p>
+      <p>
+        <span
+          id="pointer"
+        >
+          Species: 
+        </span>
+        <span
+          id="content"
+        >
+          Human
+        </span>
+      </p>
+      <p>
+        <span
+          id="pointer"
+        >
+          Home World: 
+        </span>
+        <span
+          id="content"
+        >
+          Stewjon
+        </span>
+      </p>
+    </styled.div>
+    <styled.div>
+      <h2>
+        Piloted Starships
+      </h2>
+      <StarshipCard
+        key="starships.48"
+        onClick={[Function]}
+        starship={
+          Object {
+            "id": "starships.48",
+            "image": "www.testImage.com",
+            "name": "Starship",
+          }
+        }
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

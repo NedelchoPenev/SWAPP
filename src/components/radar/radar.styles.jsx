@@ -59,7 +59,14 @@ background: black;
   }
 
   svg {
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 800px) {
+    svg {
     width: 280px;
     height: 280px;
+  }
   }
 `;
