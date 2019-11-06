@@ -13,7 +13,7 @@ import { typeDefs, resolvers } from './graphql/resolvers';
 import App from './App';
 
 const httpLink = createHttpLink({
-  uri: 'https://swapp.st6.io/graphql'
+  uri: 'https://swapp.st6.io/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -32,13 +32,13 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache,
   typeDefs,
-  resolvers
+  resolvers,
 });
 
 client.writeData({
   data: {
     isLoggedIn: !!localStorage.getItem(AUTH_TOKEN),
-    theme: !localStorage.getItem(THEME) ? 'light' : localStorage.getItem(THEME)
+    theme: !localStorage.getItem(THEME) ? 'light' : localStorage.getItem(THEME),
   },
 });
 

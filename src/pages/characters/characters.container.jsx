@@ -31,20 +31,20 @@ const CharactersPageContainer = () => {
     variables: { first: TWELVE_CHARACTERS },
   });
 
-  if (loading) return <Spinner/>;
+  if (loading) return <Spinner />;
   if (error) return `Error! ${error}`;
 
   const allPeople = data.allPeople;
 
   const loadMore = () => {
-    fetchMore({variables: {
+    fetchMore({
+      variables: {
         after: allPeople.pageInfo.endCursor,
       },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         const newEdges = fetchMoreResult.allPeople.edges;
         const pageInfo = fetchMoreResult.allPeople.pageInfo;
-        console.log(fetchMore.variables)
-  
+
         return newEdges.length
           ? {
               allPeople: {
@@ -55,15 +55,10 @@ const CharactersPageContainer = () => {
             }
           : previousResult;
       },
-    })
-  }
+    });
+  };
 
-  return (
-    <CharactersPage
-      people={allPeople}
-      onLoadMore={() => loadMore()}
-    />
-  );
+  return <CharactersPage people={allPeople} onLoadMore={() => loadMore()} />;
 };
 
 export default CharactersPageContainer;

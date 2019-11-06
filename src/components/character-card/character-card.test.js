@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import CharacterCard from './character-card.component'
+import CharacterCard from './character-card.component';
 
 describe('CharacterCard component', () => {
   let wrapper;
@@ -18,12 +18,12 @@ describe('CharacterCard component', () => {
       character: {
         id: mockId,
         name: mockName,
-        image: imageUrl
+        image: imageUrl,
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    wrapper = shallow(<CharacterCard.WrappedComponent {...mockProps}/>);
+    wrapper = shallow(<CharacterCard.WrappedComponent {...mockProps} />);
   });
 
   it('should render CharacterCard component', () => {
@@ -33,13 +33,11 @@ describe('CharacterCard component', () => {
   it('should call history.push with the right string when CharacterCard clicked', () => {
     wrapper.simulate('click');
 
-    expect(mockHistory.push).toHaveBeenCalledWith(
-      `/characters/${mockId}`
-    );
+    expect(mockHistory.push).toHaveBeenCalledWith(`/characters/${mockId}`);
   });
 
   it('should render imageUrl', () => {
-    expect(wrapper.find("img").prop("src")).toBe(imageUrl);
+    expect(wrapper.find('img').prop('src')).toBe(imageUrl);
   });
 
   it('should render name', () => {
@@ -47,7 +45,7 @@ describe('CharacterCard component', () => {
   });
 
   it('should render imageUrl if image is available', () => {
-    const newWrapper = mount(<CharacterCard.WrappedComponent {...mockProps}/>)
+    const newWrapper = mount(<CharacterCard.WrappedComponent {...mockProps} />);
 
     expect(newWrapper.props().character.image).toBe(imageUrl);
   });
@@ -57,12 +55,12 @@ describe('CharacterCard component', () => {
       character: {
         id: mockId,
         name: mockName,
-        image: null
+        image: null,
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    const newWrapper = mount(<CharacterCard.WrappedComponent {...mockProps}/>)
+    const newWrapper = mount(<CharacterCard.WrappedComponent {...mockProps} />);
 
     expect(newWrapper.props().character.image).toBe(null);
   });

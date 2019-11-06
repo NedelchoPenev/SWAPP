@@ -1,49 +1,2623 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignIn component should render SignIn component 1`] = `
-<styled.div>
-  <LogoContainer
-    asTitle={true}
-  />
-  <styled.div>
-    <form
-      onSubmit={[Function]}
+<MockedProvider
+  addTypename={true}
+  cache={
+    InMemoryCache {
+      "addTypename": true,
+      "cacheKeyRoot": KeyTrie {
+        "weak": WeakMap {},
+        "weakness": true,
+      },
+      "config": Object {
+        "addTypename": true,
+        "dataIdFromObject": [Function],
+        "fragmentMatcher": HeuristicFragmentMatcher {},
+        "freezeResults": false,
+        "resultCaching": true,
+      },
+      "data": DepTrackingCache {
+        "data": Object {
+          "ROOT_QUERY": Object {
+            "theme": "light",
+          },
+        },
+        "depend": [Function],
+      },
+      "maybeBroadcastWatch": [Function],
+      "optimisticData": DepTrackingCache {
+        "data": Object {
+          "ROOT_QUERY": Object {
+            "theme": "light",
+          },
+        },
+        "depend": [Function],
+      },
+      "silenceBroadcast": false,
+      "storeReader": StoreReader {
+        "executeSelectionSet": [Function],
+        "executeStoreQuery": [Function],
+        "executeSubSelectedArray": [Function],
+        "freezeResults": false,
+      },
+      "storeWriter": StoreWriter {},
+      "typenameDocumentCache": Map {
+        Object {
+          "definitions": Array [
+            Object {
+              "kind": "OperationDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "GeneratedClientQuery",
+              },
+              "operation": "query",
+              "selectionSet": Object {
+                "kind": "SelectionSet",
+                "selections": Array [
+                  Object {
+                    "kind": "Field",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "theme",
+                    },
+                    "selectionSet": undefined,
+                  },
+                ],
+              },
+            },
+          ],
+          "kind": "Document",
+        } => Object {
+          "definitions": Array [
+            Object {
+              "kind": "OperationDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "GeneratedClientQuery",
+              },
+              "operation": "query",
+              "selectionSet": Object {
+                "kind": "SelectionSet",
+                "selections": Array [
+                  Object {
+                    "kind": "Field",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "theme",
+                    },
+                    "selectionSet": undefined,
+                  },
+                ],
+              },
+            },
+          ],
+          "kind": "Document",
+        },
+        Object {
+          "definitions": Array [
+            Object {
+              "directives": Array [],
+              "kind": "OperationDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "GetTheme",
+              },
+              "operation": "query",
+              "selectionSet": Object {
+                "kind": "SelectionSet",
+                "selections": Array [
+                  Object {
+                    "alias": undefined,
+                    "arguments": Array [],
+                    "directives": Array [
+                      Object {
+                        "arguments": Array [],
+                        "kind": "Directive",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "client",
+                        },
+                      },
+                    ],
+                    "kind": "Field",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "theme",
+                    },
+                    "selectionSet": undefined,
+                  },
+                ],
+              },
+              "variableDefinitions": Array [],
+            },
+          ],
+          "kind": "Document",
+          "loc": Object {
+            "end": 42,
+            "start": 0,
+          },
+        } => Object {
+          "definitions": Array [
+            Object {
+              "directives": Array [],
+              "kind": "OperationDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "GetTheme",
+              },
+              "operation": "query",
+              "selectionSet": Object {
+                "kind": "SelectionSet",
+                "selections": Array [
+                  Object {
+                    "alias": undefined,
+                    "arguments": Array [],
+                    "directives": Array [
+                      Object {
+                        "arguments": Array [],
+                        "kind": "Directive",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "client",
+                        },
+                      },
+                    ],
+                    "kind": "Field",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "theme",
+                    },
+                    "selectionSet": undefined,
+                  },
+                ],
+              },
+              "variableDefinitions": Array [],
+            },
+          ],
+          "kind": "Document",
+          "loc": Object {
+            "end": 42,
+            "start": 0,
+          },
+        },
+      },
+      "watches": Set {
+        Object {
+          "callback": [Function],
+          "optimistic": true,
+          "previousResult": [Function],
+          "query": Object {
+            "definitions": Array [
+              Object {
+                "directives": Array [],
+                "kind": "OperationDefinition",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "GetTheme",
+                },
+                "operation": "query",
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [
+                        Object {
+                          "arguments": Array [],
+                          "kind": "Directive",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "client",
+                          },
+                        },
+                      ],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "theme",
+                      },
+                      "selectionSet": undefined,
+                    },
+                  ],
+                },
+                "variableDefinitions": Array [],
+              },
+            ],
+            "kind": "Document",
+            "loc": Object {
+              "end": 42,
+              "start": 0,
+            },
+          },
+          "variables": Object {},
+        },
+      },
+    }
+  }
+  childProps={
+    Object {
+      "history": Object {
+        "push": [MockFunction],
+      },
+    }
+  }
+  mocks={
+    Array [
+      Object {
+        "request": Object {
+          "query": Object {
+            "definitions": Array [
+              Object {
+                "directives": Array [],
+                "kind": "OperationDefinition",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "SignIn",
+                },
+                "operation": "mutation",
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [
+                        Object {
+                          "kind": "Argument",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "email",
+                          },
+                          "value": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "email",
+                            },
+                          },
+                        },
+                        Object {
+                          "kind": "Argument",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "password",
+                          },
+                          "value": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "password",
+                            },
+                          },
+                        },
+                      ],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "signIn",
+                      },
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "token",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+                "variableDefinitions": Array [
+                  Object {
+                    "defaultValue": undefined,
+                    "directives": Array [],
+                    "kind": "VariableDefinition",
+                    "type": Object {
+                      "kind": "NonNullType",
+                      "type": Object {
+                        "kind": "NamedType",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "String",
+                        },
+                      },
+                    },
+                    "variable": Object {
+                      "kind": "Variable",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "email",
+                      },
+                    },
+                  },
+                  Object {
+                    "defaultValue": undefined,
+                    "directives": Array [],
+                    "kind": "VariableDefinition",
+                    "type": Object {
+                      "kind": "NonNullType",
+                      "type": Object {
+                        "kind": "NamedType",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "String",
+                        },
+                      },
+                    },
+                    "variable": Object {
+                      "kind": "Variable",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "password",
+                      },
+                    },
+                  },
+                ],
+              },
+            ],
+            "kind": "Document",
+            "loc": Object {
+              "end": 129,
+              "start": 0,
+            },
+          },
+          "variables": Object {
+            "email": "email",
+            "password": "password",
+          },
+        },
+        "result": [Function],
+      },
+    ]
+  }
+  resolvers={Object {}}
+>
+  <ApolloProvider
+    client={
+      ApolloClient {
+        "cache": InMemoryCache {
+          "addTypename": true,
+          "cacheKeyRoot": KeyTrie {
+            "weak": WeakMap {},
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": true,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {
+              "ROOT_QUERY": Object {
+                "theme": "light",
+              },
+            },
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {
+              "ROOT_QUERY": Object {
+                "theme": "light",
+              },
+            },
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {
+            Object {
+              "definitions": Array [
+                Object {
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "GeneratedClientQuery",
+                  },
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "theme",
+                        },
+                        "selectionSet": undefined,
+                      },
+                    ],
+                  },
+                },
+              ],
+              "kind": "Document",
+            } => Object {
+              "definitions": Array [
+                Object {
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "GeneratedClientQuery",
+                  },
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "theme",
+                        },
+                        "selectionSet": undefined,
+                      },
+                    ],
+                  },
+                },
+              ],
+              "kind": "Document",
+            },
+            Object {
+              "definitions": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "GetTheme",
+                  },
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [
+                          Object {
+                            "arguments": Array [],
+                            "kind": "Directive",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "client",
+                            },
+                          },
+                        ],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "theme",
+                        },
+                        "selectionSet": undefined,
+                      },
+                    ],
+                  },
+                  "variableDefinitions": Array [],
+                },
+              ],
+              "kind": "Document",
+              "loc": Object {
+                "end": 42,
+                "start": 0,
+              },
+            } => Object {
+              "definitions": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "GetTheme",
+                  },
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [
+                          Object {
+                            "arguments": Array [],
+                            "kind": "Directive",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "client",
+                            },
+                          },
+                        ],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "theme",
+                        },
+                        "selectionSet": undefined,
+                      },
+                    ],
+                  },
+                  "variableDefinitions": Array [],
+                },
+              ],
+              "kind": "Document",
+              "loc": Object {
+                "end": 42,
+                "start": 0,
+              },
+            },
+          },
+          "watches": Set {
+            Object {
+              "callback": [Function],
+              "optimistic": true,
+              "previousResult": [Function],
+              "query": Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GetTheme",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [
+                            Object {
+                              "arguments": Array [],
+                              "kind": "Directive",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "client",
+                              },
+                            },
+                          ],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 42,
+                  "start": 0,
+                },
+              },
+              "variables": Object {},
+            },
+          },
+        },
+        "clearStoreCallbacks": Array [],
+        "defaultOptions": Object {},
+        "disableNetworkFetches": false,
+        "link": MockLink {
+          "addTypename": true,
+          "mockedResponsesByKey": Object {
+            "{\\"query\\":\\"mutation SignIn($email: String!, $password: String!) {\\\\n  signIn(email: $email, password: $password) {\\\\n    token\\\\n    __typename\\\\n  }\\\\n}\\\\n\\"}": Array [
+              Object {
+                "request": Object {
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "SignIn",
+                        },
+                        "operation": "mutation",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "email",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "email",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "password",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "password",
+                                    },
+                                  },
+                                },
+                              ],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "signIn",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "token",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [
+                          Object {
+                            "defaultValue": undefined,
+                            "directives": Array [],
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NonNullType",
+                              "type": Object {
+                                "kind": "NamedType",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "String",
+                                },
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "email",
+                              },
+                            },
+                          },
+                          Object {
+                            "defaultValue": undefined,
+                            "directives": Array [],
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NonNullType",
+                              "type": Object {
+                                "kind": "NamedType",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "String",
+                                },
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "password",
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 129,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {
+                    "email": "email",
+                    "password": "password",
+                  },
+                },
+                "result": [Function],
+              },
+            ],
+          },
+        },
+        "localState": LocalState {
+          "cache": InMemoryCache {
+            "addTypename": true,
+            "cacheKeyRoot": KeyTrie {
+              "weak": WeakMap {},
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": true,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {
+                "ROOT_QUERY": Object {
+                  "theme": "light",
+                },
+              },
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {
+                "ROOT_QUERY": Object {
+                  "theme": "light",
+                },
+              },
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {
+              Object {
+                "definitions": Array [
+                  Object {
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GeneratedClientQuery",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                  },
+                ],
+                "kind": "Document",
+              } => Object {
+                "definitions": Array [
+                  Object {
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GeneratedClientQuery",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                  },
+                ],
+                "kind": "Document",
+              },
+              Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GetTheme",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [
+                            Object {
+                              "arguments": Array [],
+                              "kind": "Directive",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "client",
+                              },
+                            },
+                          ],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 42,
+                  "start": 0,
+                },
+              } => Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GetTheme",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [
+                            Object {
+                              "arguments": Array [],
+                              "kind": "Directive",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "client",
+                              },
+                            },
+                          ],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 42,
+                  "start": 0,
+                },
+              },
+            },
+            "watches": Set {
+              Object {
+                "callback": [Function],
+                "optimistic": true,
+                "previousResult": [Function],
+                "query": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                },
+                "variables": Object {},
+              },
+            },
+          },
+          "client": [Circular],
+          "resolvers": Object {},
+        },
+        "mutate": [Function],
+        "query": [Function],
+        "queryDeduplication": true,
+        "queryManager": QueryManager {
+          "assumeImmutableResults": false,
+          "clientAwareness": Object {
+            "name": undefined,
+            "version": undefined,
+          },
+          "dataStore": DataStore {
+            "cache": InMemoryCache {
+              "addTypename": true,
+              "cacheKeyRoot": KeyTrie {
+                "weak": WeakMap {},
+                "weakness": true,
+              },
+              "config": Object {
+                "addTypename": true,
+                "dataIdFromObject": [Function],
+                "fragmentMatcher": HeuristicFragmentMatcher {},
+                "freezeResults": false,
+                "resultCaching": true,
+              },
+              "data": DepTrackingCache {
+                "data": Object {
+                  "ROOT_QUERY": Object {
+                    "theme": "light",
+                  },
+                },
+                "depend": [Function],
+              },
+              "maybeBroadcastWatch": [Function],
+              "optimisticData": DepTrackingCache {
+                "data": Object {
+                  "ROOT_QUERY": Object {
+                    "theme": "light",
+                  },
+                },
+                "depend": [Function],
+              },
+              "silenceBroadcast": false,
+              "storeReader": StoreReader {
+                "executeSelectionSet": [Function],
+                "executeStoreQuery": [Function],
+                "executeSubSelectedArray": [Function],
+                "freezeResults": false,
+              },
+              "storeWriter": StoreWriter {},
+              "typenameDocumentCache": Map {
+                Object {
+                  "definitions": Array [
+                    Object {
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GeneratedClientQuery",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                  "kind": "Document",
+                } => Object {
+                  "definitions": Array [
+                    Object {
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GeneratedClientQuery",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                  "kind": "Document",
+                },
+                Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                } => Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                },
+              },
+              "watches": Set {
+                Object {
+                  "callback": [Function],
+                  "optimistic": true,
+                  "previousResult": [Function],
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "GetTheme",
+                        },
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [
+                                Object {
+                                  "arguments": Array [],
+                                  "kind": "Directive",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "client",
+                                  },
+                                },
+                              ],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "theme",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 42,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {},
+                },
+              },
+            },
+          },
+          "fetchQueryRejectFns": Map {},
+          "idCounter": 3,
+          "inFlightLinkObservables": Map {},
+          "link": MockLink {
+            "addTypename": true,
+            "mockedResponsesByKey": Object {
+              "{\\"query\\":\\"mutation SignIn($email: String!, $password: String!) {\\\\n  signIn(email: $email, password: $password) {\\\\n    token\\\\n    __typename\\\\n  }\\\\n}\\\\n\\"}": Array [
+                Object {
+                  "request": Object {
+                    "query": Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "SignIn",
+                          },
+                          "operation": "mutation",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [
+                                  Object {
+                                    "kind": "Argument",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "email",
+                                    },
+                                    "value": Object {
+                                      "kind": "Variable",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "email",
+                                      },
+                                    },
+                                  },
+                                  Object {
+                                    "kind": "Argument",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "password",
+                                    },
+                                    "value": Object {
+                                      "kind": "Variable",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "password",
+                                      },
+                                    },
+                                  },
+                                ],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "signIn",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "token",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [
+                            Object {
+                              "defaultValue": undefined,
+                              "directives": Array [],
+                              "kind": "VariableDefinition",
+                              "type": Object {
+                                "kind": "NonNullType",
+                                "type": Object {
+                                  "kind": "NamedType",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "String",
+                                  },
+                                },
+                              },
+                              "variable": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "email",
+                                },
+                              },
+                            },
+                            Object {
+                              "defaultValue": undefined,
+                              "directives": Array [],
+                              "kind": "VariableDefinition",
+                              "type": Object {
+                                "kind": "NonNullType",
+                                "type": Object {
+                                  "kind": "NamedType",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "String",
+                                  },
+                                },
+                              },
+                              "variable": Object {
+                                "kind": "Variable",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "password",
+                                },
+                              },
+                            },
+                          ],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 129,
+                        "start": 0,
+                      },
+                    },
+                    "variables": Object {
+                      "email": "email",
+                      "password": "password",
+                    },
+                  },
+                  "result": [Function],
+                },
+              ],
+            },
+          },
+          "localState": LocalState {
+            "cache": InMemoryCache {
+              "addTypename": true,
+              "cacheKeyRoot": KeyTrie {
+                "weak": WeakMap {},
+                "weakness": true,
+              },
+              "config": Object {
+                "addTypename": true,
+                "dataIdFromObject": [Function],
+                "fragmentMatcher": HeuristicFragmentMatcher {},
+                "freezeResults": false,
+                "resultCaching": true,
+              },
+              "data": DepTrackingCache {
+                "data": Object {
+                  "ROOT_QUERY": Object {
+                    "theme": "light",
+                  },
+                },
+                "depend": [Function],
+              },
+              "maybeBroadcastWatch": [Function],
+              "optimisticData": DepTrackingCache {
+                "data": Object {
+                  "ROOT_QUERY": Object {
+                    "theme": "light",
+                  },
+                },
+                "depend": [Function],
+              },
+              "silenceBroadcast": false,
+              "storeReader": StoreReader {
+                "executeSelectionSet": [Function],
+                "executeStoreQuery": [Function],
+                "executeSubSelectedArray": [Function],
+                "freezeResults": false,
+              },
+              "storeWriter": StoreWriter {},
+              "typenameDocumentCache": Map {
+                Object {
+                  "definitions": Array [
+                    Object {
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GeneratedClientQuery",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                  "kind": "Document",
+                } => Object {
+                  "definitions": Array [
+                    Object {
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GeneratedClientQuery",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                  "kind": "Document",
+                },
+                Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                } => Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                },
+              },
+              "watches": Set {
+                Object {
+                  "callback": [Function],
+                  "optimistic": true,
+                  "previousResult": [Function],
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "GetTheme",
+                        },
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [
+                                Object {
+                                  "arguments": Array [],
+                                  "kind": "Directive",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "client",
+                                  },
+                                },
+                              ],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "theme",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 42,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {},
+                },
+              },
+            },
+            "client": [Circular],
+            "resolvers": Object {},
+          },
+          "mutationStore": MutationStore {
+            "store": Object {},
+          },
+          "onBroadcast": [Function],
+          "pollingInfoByQueryId": Map {},
+          "queries": Map {
+            "1" => Object {
+              "cancel": [Function],
+              "document": Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GetTheme",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [
+                            Object {
+                              "arguments": Array [],
+                              "kind": "Directive",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "client",
+                              },
+                            },
+                          ],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 42,
+                  "start": 0,
+                },
+              },
+              "invalidated": false,
+              "lastRequestId": 2,
+              "listeners": Set {
+                [Function],
+              },
+              "newData": null,
+              "observableQuery": ObservableQuery {
+                "_subscriber": [Function],
+                "isTornDown": false,
+                "lastResult": Object {
+                  "data": Object {
+                    "theme": "light",
+                  },
+                  "loading": false,
+                  "networkStatus": 7,
+                  "stale": false,
+                },
+                "lastResultSnapshot": Object {
+                  "data": Object {
+                    "theme": "light",
+                  },
+                  "loading": false,
+                  "networkStatus": 7,
+                  "stale": false,
+                },
+                "observers": Set {
+                  SubscriptionObserver {
+                    "_subscription": Subscription {
+                      "_cleanup": [Function],
+                      "_observer": Object {
+                        "error": [Function],
+                        "next": [Function],
+                      },
+                      "_queue": undefined,
+                      "_state": "ready",
+                    },
+                  },
+                },
+                "options": Object {
+                  "context": undefined,
+                  "displayName": "Query",
+                  "metadata": Object {
+                    "reactComponent": Object {
+                      "displayName": "Query",
+                    },
+                  },
+                  "notifyOnNetworkStatusChange": false,
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "GetTheme",
+                        },
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [
+                                Object {
+                                  "arguments": Array [],
+                                  "kind": "Directive",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "client",
+                                  },
+                                },
+                              ],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "theme",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 42,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {},
+                },
+                "queryId": "1",
+                "queryManager": [Circular],
+                "queryName": "GetTheme",
+                "shouldSubscribe": true,
+                "subscriptions": Set {},
+                "variables": Object {},
+              },
+              "subscriptions": Set {},
+            },
+          },
+          "queryDeduplication": true,
+          "queryStore": QueryStore {
+            "store": Object {
+              "1": Object {
+                "document": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                },
+                "graphQLErrors": Array [],
+                "metadata": Object {
+                  "reactComponent": Object {
+                    "displayName": "Query",
+                  },
+                },
+                "networkError": null,
+                "networkStatus": 7,
+                "previousVariables": null,
+                "variables": Object {},
+              },
+            },
+          },
+          "ssrMode": false,
+          "transformCache": WeakMap {},
+        },
+        "reFetchObservableQueries": [Function],
+        "resetStore": [Function],
+        "resetStoreCallbacks": Array [],
+        "store": DataStore {
+          "cache": InMemoryCache {
+            "addTypename": true,
+            "cacheKeyRoot": KeyTrie {
+              "weak": WeakMap {},
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": true,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {
+                "ROOT_QUERY": Object {
+                  "theme": "light",
+                },
+              },
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {
+                "ROOT_QUERY": Object {
+                  "theme": "light",
+                },
+              },
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {
+              Object {
+                "definitions": Array [
+                  Object {
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GeneratedClientQuery",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                  },
+                ],
+                "kind": "Document",
+              } => Object {
+                "definitions": Array [
+                  Object {
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GeneratedClientQuery",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                  },
+                ],
+                "kind": "Document",
+              },
+              Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GetTheme",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [
+                            Object {
+                              "arguments": Array [],
+                              "kind": "Directive",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "client",
+                              },
+                            },
+                          ],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 42,
+                  "start": 0,
+                },
+              } => Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "GetTheme",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [
+                            Object {
+                              "arguments": Array [],
+                              "kind": "Directive",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "client",
+                              },
+                            },
+                          ],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": undefined,
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 42,
+                  "start": 0,
+                },
+              },
+            },
+            "watches": Set {
+              Object {
+                "callback": [Function],
+                "optimistic": true,
+                "previousResult": [Function],
+                "query": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "GetTheme",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [
+                              Object {
+                                "arguments": Array [],
+                                "kind": "Directive",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "client",
+                                },
+                              },
+                            ],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "theme",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 42,
+                    "start": 0,
+                  },
+                },
+                "variables": Object {},
+              },
+            },
+          },
+        },
+        "typeDefs": undefined,
+        "version": "2.6.4",
+        "watchQuery": [Function],
+      }
+    }
+  >
+    <SignIn
+      history={
+        Object {
+          "push": [MockFunction],
+        }
+      }
     >
-      <FormInput
-        handleChange={[Function]}
-        name="email"
-        placeholder="Email"
-        required={true}
-        type="text"
-        value=""
-      />
-      <FormInput
-        handleChange={[Function]}
-        name="password"
-        placeholder="Password"
-        required={true}
-        type="password"
-        value=""
-      />
-      <CustomButton
-        id="form-button"
-        type="submit"
+      <Mutation
+        mutation={
+          Object {
+            "definitions": Array [
+              Object {
+                "directives": Array [],
+                "kind": "OperationDefinition",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "SignIn",
+                },
+                "operation": "mutation",
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [
+                        Object {
+                          "kind": "Argument",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "email",
+                          },
+                          "value": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "email",
+                            },
+                          },
+                        },
+                        Object {
+                          "kind": "Argument",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "password",
+                          },
+                          "value": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "password",
+                            },
+                          },
+                        },
+                      ],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "signIn",
+                      },
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "token",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+                "variableDefinitions": Array [
+                  Object {
+                    "defaultValue": undefined,
+                    "directives": Array [],
+                    "kind": "VariableDefinition",
+                    "type": Object {
+                      "kind": "NonNullType",
+                      "type": Object {
+                        "kind": "NamedType",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "String",
+                        },
+                      },
+                    },
+                    "variable": Object {
+                      "kind": "Variable",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "email",
+                      },
+                    },
+                  },
+                  Object {
+                    "defaultValue": undefined,
+                    "directives": Array [],
+                    "kind": "VariableDefinition",
+                    "type": Object {
+                      "kind": "NonNullType",
+                      "type": Object {
+                        "kind": "NamedType",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "String",
+                        },
+                      },
+                    },
+                    "variable": Object {
+                      "kind": "Variable",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "password",
+                      },
+                    },
+                  },
+                ],
+              },
+            ],
+            "kind": "Document",
+            "loc": Object {
+              "end": 129,
+              "start": 0,
+            },
+          }
+        }
+        onCompleted={[Function]}
+        variables={
+          Object {
+            "email": "",
+            "password": "",
+          }
+        }
       >
-         Login 
-      </CustomButton>
-    </form>
-  </styled.div>
-  <p>
-    <span>
-      Email: 
-    </span>
-    demo@st6.io
-  </p>
-  <p>
-    <span>
-      Password: 
-    </span>
-    demo1234
-  </p>
-</styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-ifAKCX",
+                  "isStatic": false,
+                  "lastClassName": "hWQphM",
+                  "rules": Array [
+                    "
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 4em auto;
+  padding: 0 2em 1.5em;
+  background: #000;
+
+  & > p {
+    margin: 0.2em auto;
+    color: ",
+                    [Function],
+                    ";
+
+    & > span {
+      color: ",
+                    [Function],
+                    ";
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0;
+    font-size: 3vw;
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-ifAKCX",
+                "target": "div",
+                "toString": [Function],
+                "usesTheme": false,
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="sc-ifAKCX hWQphM"
+            >
+              <LogoContainer
+                asTitle={true}
+              >
+                <Logo
+                  asTitle={true}
+                  onClick={[Function]}
+                >
+                  <LogoStyle
+                    asTitle={true}
+                    onClick={[Function]}
+                  >
+                    <StyledComponent
+                      asTitle={true}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-htpNat",
+                            "isStatic": false,
+                            "lastClassName": "fZGDuD",
+                            "rules": Array [
+                              "
+  font-family: Death Star;
+  text-align: center;
+  color: #ffe300;
+  cursor: pointer;
+  ",
+                              [Function],
+                              "
+",
+                            ],
+                          },
+                          "displayName": "LogoStyle",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-htpNat",
+                          "target": "div",
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="sc-htpNat fZGDuD"
+                        onClick={[Function]}
+                      >
+                        SWAPP
+                      </div>
+                    </StyledComponent>
+                  </LogoStyle>
+                </Logo>
+              </LogoContainer>
+              <styled.div>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-EHOje",
+                        "isStatic": false,
+                        "lastClassName": "fuklpK",
+                        "rules": Array [
+                          "
+  background: ",
+                          [Function],
+                          ";
+  display: block;
+  padding: 3em 4em 1em;
+  border-radius: 6px;
+
+  #form-button {
+    float: right;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 10px 3px;
+  }
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-EHOje",
+                      "target": "div",
+                      "toString": [Function],
+                      "usesTheme": false,
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <div
+                    className="sc-EHOje fuklpK"
+                  >
+                    <form
+                      onSubmit={[Function]}
+                    >
+                      <FormInput
+                        handleChange={[Function]}
+                        name="email"
+                        placeholder="Email"
+                        required={true}
+                        type="text"
+                        value=""
+                      >
+                        <styled.input
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="Email"
+                          required={true}
+                          type="text"
+                          value=""
+                        >
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bwzfXH",
+                                  "isStatic": false,
+                                  "lastClassName": "itJcLx",
+                                  "rules": Array [
+                                    "
+  background: #e8f0fd;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 5px 0 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 800px) {
+    padding: 2px;
+    margin: 5px;
+    width: 95%;
+  }
+",
+                                  ],
+                                },
+                                "displayName": "styled.input",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bwzfXH",
+                                "target": "input",
+                                "toString": [Function],
+                                "usesTheme": false,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="Email"
+                            required={true}
+                            type="text"
+                            value=""
+                          >
+                            <input
+                              className="sc-bwzfXH itJcLx"
+                              name="email"
+                              onChange={[Function]}
+                              placeholder="Email"
+                              required={true}
+                              type="text"
+                              value=""
+                            />
+                          </StyledComponent>
+                        </styled.input>
+                      </FormInput>
+                      <FormInput
+                        handleChange={[Function]}
+                        name="password"
+                        placeholder="Password"
+                        required={true}
+                        type="password"
+                        value=""
+                      >
+                        <styled.input
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Password"
+                          required={true}
+                          type="password"
+                          value=""
+                        >
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bwzfXH",
+                                  "isStatic": false,
+                                  "lastClassName": "itJcLx",
+                                  "rules": Array [
+                                    "
+  background: #e8f0fd;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 5px 0 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 800px) {
+    padding: 2px;
+    margin: 5px;
+    width: 95%;
+  }
+",
+                                  ],
+                                },
+                                "displayName": "styled.input",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bwzfXH",
+                                "target": "input",
+                                "toString": [Function],
+                                "usesTheme": false,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            required={true}
+                            type="password"
+                            value=""
+                          >
+                            <input
+                              className="sc-bwzfXH itJcLx"
+                              name="password"
+                              onChange={[Function]}
+                              placeholder="Password"
+                              required={true}
+                              type="password"
+                              value=""
+                            />
+                          </StyledComponent>
+                        </styled.input>
+                      </FormInput>
+                      <CustomButton
+                        id="form-button"
+                        onClick={[Function]}
+                        type="submit"
+                      >
+                        <CustomButtonContainer
+                          id="form-button"
+                          onClick={[Function]}
+                          type="submit"
+                        >
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bdVaJa",
+                                  "isStatic": false,
+                                  "lastClassName": "cKrRCr",
+                                  "rules": Array [
+                                    "
+  font-size: 1.5vw;
+  font-weight: bolder;
+  color: ",
+                                    [Function],
+                                    ";
+  background: ",
+                                    [Function],
+                                    ";
+  border: 2px ",
+                                    [Function],
+                                    ";
+  border-radius: 5px;
+  padding: 10px 25px;
+
+  @media screen and (max-width: 800px) {
+    padding: 5px 15px;
+    font-size: 3.5vw;
+    margin: 15px;
+  }
+",
+                                  ],
+                                },
+                                "displayName": "CustomButtonContainer",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bdVaJa",
+                                "target": "button",
+                                "toString": [Function],
+                                "usesTheme": false,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            id="form-button"
+                            onClick={[Function]}
+                            type="submit"
+                          >
+                            <button
+                              className="sc-bdVaJa cKrRCr"
+                              id="form-button"
+                              onClick={[Function]}
+                              type="submit"
+                            >
+                               
+                              Login
+                               
+                            </button>
+                          </StyledComponent>
+                        </CustomButtonContainer>
+                      </CustomButton>
+                    </form>
+                  </div>
+                </StyledComponent>
+              </styled.div>
+              <p>
+                <span>
+                  Email: 
+                </span>
+                demo@st6.io
+              </p>
+              <p>
+                <span>
+                  Password: 
+                </span>
+                demo1234
+              </p>
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </Mutation>
+    </SignIn>
+  </ApolloProvider>
+</MockedProvider>
 `;

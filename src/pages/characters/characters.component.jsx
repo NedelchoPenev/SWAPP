@@ -14,7 +14,9 @@ const CharactersPage = ({ people, onLoadMore }) => {
           <CharacterCard key={edge.node.id} character={edge.node} />
         ))}
       </CharContainer>
-      {people.pageInfo.hasNextPage ? <CustomButton onClick={onLoadMore}> Load More </CustomButton> : null}
+      {people.pageInfo.hasNextPage ? (
+        <CustomButton onClick={onLoadMore}> Load More </CustomButton>
+      ) : null}
     </CharWrapper>
   );
 };

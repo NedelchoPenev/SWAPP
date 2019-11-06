@@ -11,7 +11,7 @@ const StarshipDetails = ({
     maxAtmosphericSpeed,
     hyperdriveRating,
     crew,
-  }
+  },
 }) => {
   return (
     <ShipDetailsCard>

@@ -1,5 +1,5 @@
-import React from "react";
-import { MemoryRouter } from "react-router";
+import React from 'react';
+import { MemoryRouter } from 'react-router';
 import { MockedProvider } from '@apollo/react-testing';
 import { mount } from 'enzyme';
 
@@ -9,16 +9,16 @@ import StarshipPage from './starship.component';
 import Spinner from '../../components/spinner/spinner.component';
 
 const wait = (time = 0) => new Promise(res => setTimeout(res, time));
-const executeMockProviderTestCase = (wrapperInstance) => {
+const executeMockProviderTestCase = wrapperInstance => {
   return wait(100).then(() => wrapperInstance.update());
-}
+};
 
 const mocks = [
   {
     request: {
       query: GET_STARSHIPS,
       variables: {
-        id: 'starships.39', 
+        id: 'starships.39',
         first: 40,
       },
     },
@@ -34,45 +34,46 @@ const mocks = [
           maxAtmosphericSpeed: '1100',
           maxMLPerHour: '12',
           hyperdriveRating: '1',
-          crew: '1'
+          crew: '1',
         },
         allStarships: {
-          edges: [{
-            node: {
-              id: 'starships.39',
-              cost: '200000',
-              maxAtmosphericSpeed: '1100',
-              maxMLPerHour: '12',
-              hyperdriveRating: '1',
-              crew: '1',
-              starshipClass: 'starfighter',
-            }
-          }, 
-          {
-            node: {
-              id: 'starships.29',
-              cost: '2',
-              maxAtmosphericSpeed: '11',
-              maxMLPerHour: '120',
-              hyperdriveRating: '10',
-              crew: '10',
-              starshipClass: 'starfighter',
-            }
-          },
-          {
-            node: {
-              id: 'starships.9',
-              cost: '20',
-              maxAtmosphericSpeed: '110',
-              maxMLPerHour: '1278',
-              hyperdriveRating: '17',
-              crew: '17',
-              starshipClass: 'capital ship'
-            }
-          }
-        ]
-        }
-      }
+          edges: [
+            {
+              node: {
+                id: 'starships.39',
+                cost: '200000',
+                maxAtmosphericSpeed: '1100',
+                maxMLPerHour: '12',
+                hyperdriveRating: '1',
+                crew: '1',
+                starshipClass: 'starfighter',
+              },
+            },
+            {
+              node: {
+                id: 'starships.29',
+                cost: '2',
+                maxAtmosphericSpeed: '11',
+                maxMLPerHour: '120',
+                hyperdriveRating: '10',
+                crew: '10',
+                starshipClass: 'starfighter',
+              },
+            },
+            {
+              node: {
+                id: 'starships.9',
+                cost: '20',
+                maxAtmosphericSpeed: '110',
+                maxMLPerHour: '1278',
+                hyperdriveRating: '17',
+                crew: '17',
+                starshipClass: 'capital ship',
+              },
+            },
+          ],
+        },
+      },
     },
   },
 ];
@@ -80,10 +81,10 @@ const mocks = [
 const mockProps = {
   match: {
     params: {
-      starshipId: 'starships.39'
-    }
-  }
-}
+      starshipId: 'starships.39',
+    },
+  },
+};
 
 const originalError = console.error;
 
@@ -104,13 +105,13 @@ describe('StarshipPageContainer component', () => {
             <StarshipPage />
           </StarshipPageContainer>
         </MemoryRouter>
-      </MockedProvider>
+      </MockedProvider>,
     );
   });
 
   it('should render loading state initially', async () => {
     const component = mount(
-      <MockedProvider mocks={[]} >
+      <MockedProvider mocks={[]}>
         <MemoryRouter>
           <StarshipPageContainer {...mockProps}>
             <StarshipPage />
@@ -131,7 +132,7 @@ describe('StarshipPageContainer component', () => {
             <StarshipPage />
           </StarshipPageContainer>
         </MemoryRouter>
-      </MockedProvider>
+      </MockedProvider>,
     );
 
     return executeMockProviderTestCase(component).then(() => {

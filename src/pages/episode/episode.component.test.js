@@ -12,24 +12,28 @@ describe('EpisodePage component', () => {
   const mockDirector = 'George Lucas';
   const mockReleaseDate = '1999-05-19';
   const mockPeopleHasNextPage = {
-    edges: [{
-      node: {
-        id: 'test'
-      }
-    }],
+    edges: [
+      {
+        node: {
+          id: 'test',
+        },
+      },
+    ],
     pageInfo: {
-      hasNextPage: true
-    }
+      hasNextPage: true,
+    },
   };
   const mockPeopleNONextPage = {
-    edges: [{
-      node: {
-        id: 'test'
-      }
-    }],
+    edges: [
+      {
+        node: {
+          id: 'test',
+        },
+      },
+    ],
     pageInfo: {
-      hasNextPage: false
-    }
+      hasNextPage: false,
+    },
   };
 
   it('should render EpisodePage component', () => {
@@ -42,10 +46,10 @@ describe('EpisodePage component', () => {
         director: mockDirector,
         releaseDate: mockReleaseDate,
         people: mockPeopleHasNextPage,
-      }
-    }
+      },
+    };
 
-    expect(shallow(<EpisodePage {...mockProps}/>)).toMatchSnapshot();
+    expect(shallow(<EpisodePage {...mockProps} />)).toMatchSnapshot();
   });
 
   it('should NOT render button component if hasNextPage is false', () => {
@@ -58,9 +62,11 @@ describe('EpisodePage component', () => {
         director: mockDirector,
         releaseDate: mockReleaseDate,
         people: mockPeopleNONextPage,
-      }
-    }
+      },
+    };
 
-    expect(shallow(<EpisodePage {...mockProps}/>).find(CustomButton)).toEqual({});
+    expect(shallow(<EpisodePage {...mockProps} />).find(CustomButton)).toEqual(
+      {},
+    );
   });
 });

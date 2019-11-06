@@ -16,13 +16,13 @@ export const RadarContainer = styled.div`
       font-size: 5vw;
     }
   }
-`
+`;
 
 export const RadarWrapper = styled.div`
-padding: 6em 2em;
-text-align: center;
-vertical-align: middle;
-background: black;
+  padding: 6em 2em;
+  text-align: center;
+  vertical-align: middle;
+  background: black;
 
   .shape {
     fill: ${({ theme }) => theme.radarFontColor};
@@ -65,8 +65,8 @@ background: black;
 
   @media screen and (max-width: 800px) {
     svg {
-    width: 280px;
-    height: 280px;
-  }
+      width: 280px;
+      height: 280px;
+    }
   }
 `;

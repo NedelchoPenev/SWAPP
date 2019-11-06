@@ -8,8 +8,8 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  background: ${({theme}) => theme.barBackground};
-  border-color: ${({theme}) => theme.barBorderColor};
+  background: ${({ theme }) => theme.barBackground};
+  border-color: ${({ theme }) => theme.barBorderColor};
 
   @media screen and (max-width: 800px) {
     height: 60px;
@@ -43,7 +43,7 @@ export const OptionsContainer = styled.div`
 
 export const OptionLink = styled(Link)`
   padding: 10px 10px;
-  color: ${({theme}) => theme.barFontColor};
+  color: ${({ theme }) => theme.barFontColor};
   font-size: 1.4vw;
   cursor: pointer;
 
@@ -57,8 +57,8 @@ OptionLink.displayName = 'OptionLink';
 export const LogoWrapper = styled.div`
   padding: 8px;
   border-radius: 3px;
-  border: 1px solid #4BD5EE;
-  background: ${({theme}) => theme.cardBackground};
+  border: 1px solid #4bd5ee;
+  background: ${({ theme }) => theme.cardBackground};
   margin-right: 15px;
   @media screen and (max-width: 800px) {
     margin-right: 5px;

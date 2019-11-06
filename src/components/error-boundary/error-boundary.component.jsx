@@ -3,7 +3,7 @@ import React from 'react';
 import {
   ErrorImageOverlay,
   ErrorImageContainer,
-  ErrorImageText
+  ErrorImageText,
 } from './error-boundary.styles';
 
 class ErrorBoundary extends React.Component {
@@ -11,7 +11,7 @@ class ErrorBoundary extends React.Component {
     super();
 
     this.state = {
-      hasErrored: false
+      hasErrored: false,
     };
   }
 
@@ -28,7 +28,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasErrored) {
       return (
         <ErrorImageOverlay>
-          <ErrorImageContainer imageUrl='https://i.imgur.com/yW2W9SC.png' />
+          <ErrorImageContainer imageUrl="https://i.imgur.com/yW2W9SC.png" />
           <ErrorImageText>Something went wrong.</ErrorImageText>
         </ErrorImageOverlay>
       );

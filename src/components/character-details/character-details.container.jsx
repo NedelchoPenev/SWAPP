@@ -36,7 +36,7 @@ const CharacterDetailsContainer = ({ match }) => {
     variables: { id: match.params.characterId },
   });
 
-  if (loading) return <Spinner/>;
+  if (loading) return <Spinner />;
   if (error) return `Error! ${error}`;
 
   return <CharacterDetails person={data.person} />;

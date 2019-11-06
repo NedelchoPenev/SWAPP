@@ -21,7 +21,7 @@ export const SignInContainer = styled.div`
     & > span {
       color: ${({ theme }) => theme.credentials};
     }
-  } 
+  }
 
   @media screen and (max-width: 800px) {
     padding: 0;

@@ -12,7 +12,7 @@ describe('StarshipDetails component', () => {
   const mockMaxAtmosphericSpeed = '1150';
   const mockHyperdriveRating = '1';
   const mockCrew = '10';
-  let mockProps
+  let mockProps;
 
   beforeEach(() => {
     mockProps = {
@@ -24,21 +24,25 @@ describe('StarshipDetails component', () => {
         maxAtmosphericSpeed: mockMaxAtmosphericSpeed,
         hyperdriveRating: mockHyperdriveRating,
         crew: mockCrew,
-      }
+      },
     };
 
     wrapper = shallow(<StarshipDetails {...mockProps} />);
-  })
+  });
 
   it('should render StarshipDetails component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render starshipClass if starshipClass prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(5);
 
-    expect(wrapper.find('#content').first().text()).toEqual(mockClass);
+    expect(
+      wrapper
+        .find('#content')
+        .first()
+        .text(),
+    ).toEqual(mockClass);
   });
 
   it('should NOT render if starshipClass is NOT available', () => {
@@ -51,21 +55,30 @@ describe('StarshipDetails component', () => {
         maxAtmosphericSpeed: mockMaxAtmosphericSpeed,
         hyperdriveRating: mockHyperdriveRating,
         crew: mockCrew,
-      }
+      },
     };
 
-    wrapper.setProps(mockProps)
+    wrapper.setProps(mockProps);
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').first().text()).not.toEqual(mockClass);
+    expect(
+      wrapper
+        .find('#content')
+        .first()
+        .text(),
+    ).not.toEqual(mockClass);
   });
 
   it('should render cost if cost prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(5);
 
-    expect(wrapper.find('#content').at(1).text()).toEqual(`${mockCost} credits`);
+    expect(
+      wrapper
+        .find('#content')
+        .at(1)
+        .text(),
+    ).toEqual(`${mockCost} credits`);
   });
 
   it('should render 0 credits if cost is NOT available', () => {
@@ -78,19 +91,28 @@ describe('StarshipDetails component', () => {
         maxAtmosphericSpeed: mockMaxAtmosphericSpeed,
         hyperdriveRating: mockHyperdriveRating,
         crew: mockCrew,
-      }
+      },
     };
 
-    wrapper.setProps(mockProps)
+    wrapper.setProps(mockProps);
 
-    expect(wrapper.find('#content').at(1).text()).toEqual('0 credits');
+    expect(
+      wrapper
+        .find('#content')
+        .at(1)
+        .text(),
+    ).toEqual('0 credits');
   });
 
   it('should render crew if crew prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(5);
 
-    expect(wrapper.find('#content').at(2).text()).toEqual(mockCrew);
+    expect(
+      wrapper
+        .find('#content')
+        .at(2)
+        .text(),
+    ).toEqual(mockCrew);
   });
 
   it('should NOT render if crew is NOT available', () => {
@@ -103,21 +125,30 @@ describe('StarshipDetails component', () => {
         maxAtmosphericSpeed: mockMaxAtmosphericSpeed,
         hyperdriveRating: mockHyperdriveRating,
         crew: null,
-      }
+      },
     };
 
-    wrapper.setProps(mockProps)
+    wrapper.setProps(mockProps);
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').at(2).text()).not.toEqual(mockCrew);
+    expect(
+      wrapper
+        .find('#content')
+        .at(2)
+        .text(),
+    ).not.toEqual(mockCrew);
   });
 
   it('should render maxAtmosphericSpeed if maxAtmosphericSpeed prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(5);
 
-    expect(wrapper.find('#content').at(3).text()).toEqual(mockMaxAtmosphericSpeed);
+    expect(
+      wrapper
+        .find('#content')
+        .at(3)
+        .text(),
+    ).toEqual(mockMaxAtmosphericSpeed);
   });
 
   it('should NOT render if maxAtmosphericSpeed is NOT available', () => {
@@ -130,21 +161,30 @@ describe('StarshipDetails component', () => {
         maxAtmosphericSpeed: null,
         hyperdriveRating: mockHyperdriveRating,
         crew: mockCrew,
-      }
+      },
     };
 
-    wrapper.setProps(mockProps)
+    wrapper.setProps(mockProps);
 
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').at(3).text()).not.toEqual(mockMaxAtmosphericSpeed);
+    expect(
+      wrapper
+        .find('#content')
+        .at(3)
+        .text(),
+    ).not.toEqual(mockMaxAtmosphericSpeed);
   });
 
   it('should render hyperdriveRating if hyperdriveRating prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(5);
 
-    expect(wrapper.find('#content').at(4).text()).toEqual(mockHyperdriveRating);
+    expect(
+      wrapper
+        .find('#content')
+        .at(4)
+        .text(),
+    ).toEqual(mockHyperdriveRating);
   });
 
   it('should NOT render if hyperdriveRating is NOT available', () => {
@@ -157,10 +197,10 @@ describe('StarshipDetails component', () => {
         maxAtmosphericSpeed: mockMaxAtmosphericSpeed,
         hyperdriveRating: null,
         crew: mockCrew,
-      }
+      },
     };
 
-    wrapper.setProps(mockProps)
+    wrapper.setProps(mockProps);
 
     expect(wrapper.find('#pointer').length).toBe(4);
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ShipDetailsWrapper = styled.div`
   margin: 1em 10em;
-  
+
   h1,
   h2 {
     margin: 0;
