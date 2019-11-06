@@ -1,5 +1,5 @@
-import React from "react";
-import { MemoryRouter } from "react-router";
+import React from 'react';
+import { MemoryRouter } from 'react-router';
 import { MockedProvider } from '@apollo/react-testing';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { mount } from 'enzyme';
@@ -16,10 +16,11 @@ const mocks = [
     },
     result: {
       data: {
-        theme: 'light'
-      }
-    }
-  }];
+        theme: 'light',
+      },
+    },
+  },
+];
 
 const originalError = console.error;
 
@@ -36,17 +37,22 @@ describe('LogoContainer component', () => {
     const cache = new InMemoryCache();
     cache.writeData({
       data: {
-        theme: 'light'
+        theme: 'light',
       },
     });
     const component = mount(
-      <MockedProvider mocks={mocks} addTypename={false} cache={cache} resolvers={{}}>
+      <MockedProvider
+        mocks={mocks}
+        addTypename={false}
+        cache={cache}
+        resolvers={{}}
+      >
         <MemoryRouter>
           <LogoContainer>
             <Logo />
           </LogoContainer>
         </MemoryRouter>
-      </MockedProvider>
+      </MockedProvider>,
     );
 
     component.find('LogoStyle').simulate('click');
@@ -57,17 +63,22 @@ describe('LogoContainer component', () => {
     const cache = new InMemoryCache();
     cache.writeData({
       data: {
-        theme: 'dark'
+        theme: 'dark',
       },
     });
     const component = mount(
-      <MockedProvider mocks={mocks} addTypename={false} cache={cache} resolvers={{}}>
+      <MockedProvider
+        mocks={mocks}
+        addTypename={false}
+        cache={cache}
+        resolvers={{}}
+      >
         <MemoryRouter>
           <LogoContainer>
             <Logo />
           </LogoContainer>
         </MemoryRouter>
-      </MockedProvider>
+      </MockedProvider>,
     );
 
     component.find('LogoStyle').simulate('click');

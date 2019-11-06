@@ -19,8 +19,8 @@ export const lightTheme = {
   radarFontColor: '#FFE300',
   radarBackground: '#000',
   radarGrid: '#3C4858',
-  credentials: '#FFE300'
-}
+  credentials: '#FFE300',
+};
 
 export const darkTheme = {
   body: '#000',
@@ -43,5 +43,5 @@ export const darkTheme = {
   radarFontColor: '#4BD5EE',
   radarBackground: '#000',
   radarGrid: '#333',
-  credentials: '#4BD5EE'
-}
+  credentials: '#4BD5EE',
+};

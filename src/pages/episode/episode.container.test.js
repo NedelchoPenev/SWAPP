@@ -3,12 +3,10 @@ import { MemoryRouter } from 'react-router';
 import { MockedProvider } from '@apollo/react-testing';
 import { mount } from 'enzyme';
 
-import CharacterDetailsContainer, {
-  GET_PERSON,
-} from './character-details.container';
-import CharacterDetails from './character-details.component';
+import EpisodePageContainer, { GET_EPISODE } from './episode.container';
+import EpisodePage from './episode.component';
 
-import Spinner from '../spinner/spinner.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 const wait = (time = 0) => new Promise(res => setTimeout(res, time));
 const executeMockProviderTestCase = wrapperInstance => {
@@ -18,34 +16,36 @@ const executeMockProviderTestCase = wrapperInstance => {
 const mocks = [
   {
     request: {
-      query: GET_PERSON,
+      query: GET_EPISODE,
       variables: {
-        id: 'people.11',
+        id: 'films.4',
+        first: 5,
       },
     },
     result: {
       data: {
-        person: {
-          name: 'Test Name',
+        episode: {
+          id: 1,
+          title: 'Test Title',
+          episodeId: 'films.4',
+          openingCrawl: 'Test trst test',
           image: 'www.test-image.com',
-          height: '189',
-          mass: '66',
-          species: {
-            name: 'Test Species Name',
-          },
-          homeworld: {
-            name: 'Teat Homeworld Name',
-          },
-          starships: {
+          director: 'Test Director',
+          releaseDate: '1999-05-19',
+          people: {
             edges: [
               {
                 node: {
-                  id: 'starship.44',
-                  name: 'Test Starship Name',
+                  id: 'person.1',
+                  name: 'Test Name',
                   image: 'www.test-image.com',
                 },
               },
             ],
+            pageInfo: {
+              hasNextPage: true,
+              endCursor: 'test',
+            },
           },
         },
       },
@@ -56,14 +56,14 @@ const mocks = [
 const mockProps = {
   match: {
     params: {
-      characterId: 'people.11',
+      episodeId: 'films.4',
     },
   },
 };
 
 const originalError = console.error;
 
-describe('CharacterDetails component', () => {
+describe('EpisodePageContainer component', () => {
   beforeAll(() => {
     console.error = jest.fn();
   });
@@ -76,9 +76,9 @@ describe('CharacterDetails component', () => {
     mount(
       <MockedProvider mocks={mocks} addTypename={false}>
         <MemoryRouter>
-          <CharacterDetailsContainer {...mockProps}>
-            <CharacterDetails />
-          </CharacterDetailsContainer>
+          <EpisodePageContainer {...mockProps}>
+            <EpisodePage />
+          </EpisodePageContainer>
         </MemoryRouter>
       </MockedProvider>,
     );
@@ -88,9 +88,9 @@ describe('CharacterDetails component', () => {
     const component = mount(
       <MockedProvider mocks={[]}>
         <MemoryRouter>
-          <CharacterDetailsContainer {...mockProps}>
-            <CharacterDetails />
-          </CharacterDetailsContainer>
+          <EpisodePageContainer {...mockProps}>
+            <EpisodePage />
+          </EpisodePageContainer>
         </MemoryRouter>
       </MockedProvider>,
     );
@@ -98,20 +98,24 @@ describe('CharacterDetails component', () => {
     expect(component.containsMatchingElement(<Spinner />)).toBeTruthy();
   });
 
-  it('should render CharacterDetails', async () => {
-    let component;
-    component = mount(
+  it('should render EpisodePage', async () => {
+    const component = mount(
       <MockedProvider mocks={mocks} addTypename={false}>
         <MemoryRouter>
-          <CharacterDetailsContainer {...mockProps}>
-            <CharacterDetails />
-          </CharacterDetailsContainer>
+          <EpisodePageContainer {...mockProps}>
+            <EpisodePage />
+          </EpisodePageContainer>
         </MemoryRouter>
       </MockedProvider>,
     );
 
     return executeMockProviderTestCase(component).then(() => {
-      expect(component.find('h1').text()).toEqual('Test Name');
+      expect(
+        component
+          .find('h2')
+          .first()
+          .text(),
+      ).toEqual('Test Title');
     });
   });
 });

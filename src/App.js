@@ -4,7 +4,7 @@ import { useQuery } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { ThemeProvider } from 'styled-components';
 
-import SignInContainer from './pages/sign-in/sign-in.container';
+import SignIn from './pages/sign-in/sign-in.component';
 import Header from './components/header/header.component';
 import EpisodesPageContainer from './pages/episodes/episodes.container';
 import EpisodePageContainer from './pages/episode/episode.container';
@@ -31,51 +31,53 @@ const GET_THEME = gql`
 `;
 
 const App = () => {
-  const {data: {theme}} = useQuery(GET_THEME);
+  const {
+    data: { theme },
+  } = useQuery(GET_THEME);
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-  
+
   const { data } = useQuery(IS_LOGGED_IN);
 
   return (
     <ThemeProvider theme={themeMode}>
       <>
-      <GlobalStyles />
-      <Switch>
-        <Route
-          exact
-          path={['/', '/login']}
-          render={() =>
-            data.isLoggedIn ? <Redirect to="/episodes" /> : <SignInContainer />
-          }
-        />
-        <Fragment>
-          <ErrorBoundary>
-            <Header />
-            <ProtectedRoute
-              exact
-              path="/episodes"
-              component={EpisodesPageContainer}
-            />
-            <ProtectedRoute
-              path={'/episodes/:episodeId'}
-              component={EpisodePageContainer}
-            />
-            <ProtectedRoute
-              exact
-              path={'/characters'}
-              component={CharactersPageContainer}
-            />
-            <ProtectedRoute
-              path={'/characters/:characterId'}
-              component={CharacterDetailsContainer}
-            />
-            <ProtectedRoute
-              path={'/starships/:starshipId'}
-              component={StarshipPageContainer}
-            />
-          </ErrorBoundary>
-        </Fragment>
-      </Switch>
+        <GlobalStyles />
+        <Switch>
+          <Route
+            exact
+            path={['/', '/login']}
+            render={() =>
+              data.isLoggedIn ? <Redirect to="/episodes" /> : <SignIn />
+            }
+          />
+          <Fragment>
+            <ErrorBoundary>
+              <Header />
+              <ProtectedRoute
+                exact
+                path="/episodes"
+                component={EpisodesPageContainer}
+              />
+              <ProtectedRoute
+                path={'/episodes/:episodeId'}
+                component={EpisodePageContainer}
+              />
+              <ProtectedRoute
+                exact
+                path={'/characters'}
+                component={CharactersPageContainer}
+              />
+              <ProtectedRoute
+                path={'/characters/:characterId'}
+                component={CharacterDetailsContainer}
+              />
+              <ProtectedRoute
+                path={'/starships/:starshipId'}
+                component={StarshipPageContainer}
+              />
+            </ErrorBoundary>
+          </Fragment>
+        </Switch>
       </>
     </ThemeProvider>
   );

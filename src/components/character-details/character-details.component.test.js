@@ -9,17 +9,19 @@ describe('CharacterDetails component', () => {
   const mockName = 'Obi-Wan Kenobi';
   const mockHeight = '182';
   const mockMass = '77';
-  const mockSpecies = {name: 'Human'};
-  const mockHomeworld = {name: 'Stewjon'};
-  const mockStarships = [{
-    node: {
-      id: "starships.48",
-      image: 'www.testImage.com',
-      name: "Starship",
-    }
-  }]
+  const mockSpecies = { name: 'Human' };
+  const mockHomeworld = { name: 'Stewjon' };
+  const mockStarships = [
+    {
+      node: {
+        id: 'starships.48',
+        image: 'www.testImage.com',
+        name: 'Starship',
+      },
+    },
+  ];
   let mockHistory;
-  let mockProps
+  let mockProps;
 
   beforeEach(() => {
     mockHistory = { push: jest.fn() };
@@ -32,9 +34,9 @@ describe('CharacterDetails component', () => {
         mass: mockMass,
         species: mockSpecies,
         homeworld: mockHomeworld,
-        starships: { edges: mockStarships }
+        starships: { edges: mockStarships },
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
     wrapper = shallow(<CharacterDetails.WrappedComponent {...mockProps} />);
@@ -48,12 +50,14 @@ describe('CharacterDetails component', () => {
     wrapper.find('StarshipCard').simulate('click');
 
     expect(mockHistory.push).toHaveBeenCalledWith(
-      `/starships/${mockStarships[0].node.id}`
+      `/starships/${mockStarships[0].node.id}`,
     );
   });
 
   it('should render imageUrl if image is available', () => {
-    const newWrapper = mount(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = mount(
+      <CharacterDetails.WrappedComponent {...mockProps} />,
+    );
 
     expect(newWrapper.props().person.image).toBe(imageUrl);
   });
@@ -67,21 +71,27 @@ describe('CharacterDetails component', () => {
         mass: mockMass,
         species: mockSpecies,
         homeworld: mockHomeworld,
-        starships: { edges: mockStarships }
+        starships: { edges: mockStarships },
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    const newWrapper = mount(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = mount(
+      <CharacterDetails.WrappedComponent {...mockProps} />,
+    );
 
     expect(newWrapper.props().person.image).toBe(null);
   });
 
   it('should render height if height prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').first().text()).toEqual(mockHeight);
+    expect(
+      wrapper
+        .find('#content')
+        .first()
+        .text(),
+    ).toEqual(mockHeight);
   });
 
   it('should NOT render if height is NOT available', () => {
@@ -93,23 +103,34 @@ describe('CharacterDetails component', () => {
         mass: mockMass,
         species: mockSpecies,
         homeworld: mockHomeworld,
-        starships: { edges: mockStarships }
+        starships: { edges: mockStarships },
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    const newWrapper = shallow(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = shallow(
+      <CharacterDetails.WrappedComponent {...mockProps} />,
+    );
 
     expect(newWrapper.find('#pointer').length).toBe(3);
 
-    expect(newWrapper.find('#content').first().text()).not.toEqual(mockHeight);
+    expect(
+      newWrapper
+        .find('#content')
+        .first()
+        .text(),
+    ).not.toEqual(mockHeight);
   });
 
   it('should render weight if mass prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').at(1).text()).toEqual(mockMass);
+    expect(
+      wrapper
+        .find('#content')
+        .at(1)
+        .text(),
+    ).toEqual(mockMass);
   });
 
   it('should NOT render if weight is NOT available', () => {
@@ -121,23 +142,34 @@ describe('CharacterDetails component', () => {
         mass: null,
         species: mockSpecies,
         homeworld: mockHomeworld,
-        starships: { edges: mockStarships }
+        starships: { edges: mockStarships },
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    const newWrapper = shallow(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = shallow(
+      <CharacterDetails.WrappedComponent {...mockProps} />,
+    );
 
     expect(newWrapper.find('#pointer').length).toBe(3);
 
-    expect(newWrapper.find('#content').at(1).text()).not.toEqual(mockMass);
+    expect(
+      newWrapper
+        .find('#content')
+        .at(1)
+        .text(),
+    ).not.toEqual(mockMass);
   });
 
   it('should render species if species prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').at(2).text()).toEqual(mockSpecies.name);
+    expect(
+      wrapper
+        .find('#content')
+        .at(2)
+        .text(),
+    ).toEqual(mockSpecies.name);
   });
 
   it('should NOT render if species is NOT available', () => {
@@ -149,23 +181,34 @@ describe('CharacterDetails component', () => {
         mass: mockMass,
         species: null,
         homeworld: mockHomeworld,
-        starships: { edges: mockStarships }
+        starships: { edges: mockStarships },
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    const newWrapper = shallow(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = shallow(
+      <CharacterDetails.WrappedComponent {...mockProps} />,
+    );
 
     expect(newWrapper.find('#pointer').length).toBe(3);
 
-    expect(newWrapper.find('#content').at(2).text()).not.toEqual(mockSpecies.name);
+    expect(
+      newWrapper
+        .find('#content')
+        .at(2)
+        .text(),
+    ).not.toEqual(mockSpecies.name);
   });
 
   it('should render homeworld if homeworld prop is available', () => {
-
     expect(wrapper.find('#pointer').length).toBe(4);
 
-    expect(wrapper.find('#content').at(3).text()).toEqual(mockHomeworld.name);
+    expect(
+      wrapper
+        .find('#content')
+        .at(3)
+        .text(),
+    ).toEqual(mockHomeworld.name);
   });
 
   it('should NOT render if homeworld is NOT available', () => {
@@ -177,15 +220,17 @@ describe('CharacterDetails component', () => {
         mass: mockMass,
         species: mockSpecies,
         homeworld: null,
-        starships: { edges: mockStarships }
+        starships: { edges: mockStarships },
       },
-      history: mockHistory
+      history: mockHistory,
     };
 
-    const newWrapper = mount(<CharacterDetails.WrappedComponent {...mockProps}/>)
+    const newWrapper = mount(
+      <CharacterDetails.WrappedComponent {...mockProps} />,
+    );
 
     expect(newWrapper.find('#pointer').length).toBe(3);
-    
+
     expect(newWrapper.props().person.homeworld).toBe(null);
   });
 });

@@ -28,7 +28,7 @@ const EpisodesPageContainer = () => {
     variables: { first: ALL_EPISODES },
   });
 
-  if (loading) return <Spinner/>;
+  if (loading) return <Spinner />;
   if (error) return `Error! ${error}`;
 
   return <EpisodesPage allEpisodes={data.allEpisodes} />;

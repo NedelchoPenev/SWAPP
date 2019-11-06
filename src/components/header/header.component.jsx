@@ -4,6 +4,8 @@ import { useApolloClient } from 'react-apollo';
 
 import LogoContainer from '../logo/logo.container';
 
+import { AUTH_TOKEN } from '../../utils/constants';
+
 import {
   HeaderContainer,
   OptionsContainer,
@@ -27,11 +29,11 @@ const Header = ({ history }) => {
           to="/login"
           onClick={() => {
             client.writeData({ data: { isLoggedIn: false } });
-            localStorage.clear();
+            localStorage.removeItem(AUTH_TOKEN);
             history.push('/login');
           }}
         >
-          <LogoWrapper >
+          <LogoWrapper>
             <LogoutStyle />
           </LogoWrapper>
         </OptionLink>

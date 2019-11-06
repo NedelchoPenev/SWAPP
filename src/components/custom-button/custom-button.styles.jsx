@@ -15,3 +15,5 @@ export const CustomButtonContainer = styled.button`
     margin: 15px;
   }
 `;
+
+CustomButtonContainer.displayName = 'CustomButtonContainer';

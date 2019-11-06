@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import ErrorBoundary from './error-boundary.component'; 
+import ErrorBoundary from './error-boundary.component';
 
 const Something = () => null;
 
 describe('ErrorBoundary component', () => {
   it('should render ErrorBoundary component', () => {
-    const wrapper = shallow(<ErrorBoundary />)
+    const wrapper = shallow(<ErrorBoundary />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -16,13 +16,11 @@ describe('ErrorBoundary component', () => {
     const wrapper = mount(
       <ErrorBoundary>
         <Something />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
 
     const error = new Error('test');
 
     wrapper.find(Something).simulateError(error);
-
   });
-
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import EpisodeCard from './episode-card.component'
+import EpisodeCard from './episode-card.component';
 
 describe('EpisodeCard component', () => {
   let wrapper;
-  const mockId = 'episode.1'
+  const mockId = 'episode.1';
   const imageUrl = 'www.testImage.com';
   const mockTitle = 'The Phantom Menace';
   const mockOpeningCrawl = 'Test test test';
@@ -16,7 +16,7 @@ describe('EpisodeCard component', () => {
   beforeEach(() => {
     mockHistory = { push: jest.fn() };
     mockMatch = {
-      path: '/episodes'
+      path: '/episodes',
     };
 
     mockProps = {
@@ -24,13 +24,13 @@ describe('EpisodeCard component', () => {
         id: mockId,
         title: mockTitle,
         openingCrawl: mockOpeningCrawl,
-        image: imageUrl
+        image: imageUrl,
       },
       history: mockHistory,
-      match: mockMatch
+      match: mockMatch,
     };
 
-    wrapper = shallow(<EpisodeCard.WrappedComponent {...mockProps}/>);
+    wrapper = shallow(<EpisodeCard.WrappedComponent {...mockProps} />);
   });
 
   it('should render EpisodeCard component', () => {
@@ -41,12 +41,12 @@ describe('EpisodeCard component', () => {
     wrapper.simulate('click');
 
     expect(mockHistory.push).toHaveBeenCalledWith(
-      `${mockMatch.path}/${mockId}`
+      `${mockMatch.path}/${mockId}`,
     );
   });
 
   it('should render imageUrl', () => {
-    expect(wrapper.find("img").prop("src")).toBe(imageUrl);
+    expect(wrapper.find('img').prop('src')).toBe(imageUrl);
   });
 
   it('should render title', () => {

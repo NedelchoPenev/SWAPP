@@ -12,16 +12,14 @@ const captions = {
   cost: 'Cost',
 };
 
-const Radar = ({data}) => {
+const Radar = ({ data }) => {
   return (
     <RadarContainer>
       <h2>Compared to Starship Class Max</h2>
       <RadarWrapper>
         <RadarChart
           captions={captions}
-          data={[
-            data
-          ]}
+          data={[data]}
           options={{ axes: false, scales: 5, dots: true }}
         />
       </RadarWrapper>

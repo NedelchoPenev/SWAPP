@@ -5,7 +5,7 @@ import Logo from './logo.component';
 
 describe('Logo component', () => {
   it('should render Logo component', () => {
-    const wrapper = shallow(<Logo />)
+    const wrapper = shallow(<Logo />);
 
     expect(wrapper).toMatchSnapshot();
   });
